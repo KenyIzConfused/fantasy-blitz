@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://f2alm8bmbkeg"]
+
+[ext_resource type="Shader" uid="uid://rtfo3nanlv5m" path="res://water.tres" id="1_ki31q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ovwjj"]
+render_priority = 0
+shader = ExtResource("1_ki31q")
+shader_parameter/ColorParameter = Color(0.12549, 0.556863, 0.682353, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lcd6e"]
+material = SubResource("ShaderMaterial_ovwjj")
+size = Vector2(10, 10)
+subdivide_width = 20
+subdivide_depth = 20
+
+[sub_resource type="BoxMesh" id="BoxMesh_lcd6e"]
+size = Vector3(1, 1, 2.3652344)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ovwjj"]
+
+[node name="water" type="Node3D" unique_id=1969323382]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1073387297]
+mesh = SubResource("PlaneMesh_lcd6e")
+
+[node name="ground" type="MeshInstance3D" parent="." unique_id=1848017527]
+transform = Transform3D(-0.13115913, -0.9913614, 0, 0.9913614, -0.13115913, 0, 0, 0, 1, 1.1567097, -0.45071572, 0)
+mesh = SubResource("BoxMesh_lcd6e")
+
+[node name="ground2" type="MeshInstance3D" parent="." unique_id=435360289]
+transform = Transform3D(0.9978042, 0.06623216, 0, -0.06623216, 0.9978042, 0, 0, 0, 1, -1.7953758, -0.15679002, 1.8833132)
+mesh = SubResource("BoxMesh_lcd6e")
+
+[node name="ball" type="MeshInstance3D" parent="." unique_id=1974505667]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.1156166)
+mesh = SubResource("SphereMesh_ovwjj")

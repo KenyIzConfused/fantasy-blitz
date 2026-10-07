@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dj40yw3foi0go"]
+
+[ext_resource type="MeshLibrary" uid="uid://c0jj43u5mey6p" path="res://assets/tiles.meshlib" id="1_jhgpt"]
+
+[node name="outskirts" type="Node3D" unique_id=1416845744]
+
+[node name="GridMap" type="GridMap" parent="." unique_id=814088046]
+mesh_library = ExtResource("1_jhgpt")

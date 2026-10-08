@@ -90,7 +90,7 @@ texture = SubResource("NoiseTexture2D_h5vus")
 input_name = "time"
 
 [sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_1uv6y"]
-default_input_values = [1, Vector2(0.1, 0.1), 2, Vector2(0, 0)]
+default_input_values = [1, Vector2(0.5, 0.5), 2, Vector2(0, 0)]
 
 [sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_5qjys"]
 texture = SubResource("NoiseTexture2D_o12aa")
@@ -106,7 +106,7 @@ default_input_values = [0, Vector4(0, 0, 0, 0), 1, Vector4(1, 1, 1, 1), 2, Vecto
 op_type = 3
 
 [sub_resource type="VisualShaderNodeVectorOp" id="VisualShaderNodeVectorOp_017un"]
-default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(0.2, 0.2, 0.2)]
+default_input_values = [0, Vector3(0, 0, 0), 1, Vector3(0.5, 0.5, 0.5)]
 operator = 2
 
 [resource]

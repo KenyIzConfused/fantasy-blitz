@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c2o0tphwv4nt3"]
+
+[ext_resource type="PackedScene" uid="uid://dj40yw3foi0go" path="res://maps/outskirts.tscn" id="1_2dren"]
+[ext_resource type="PackedScene" uid="uid://c6f5bmd1d1f6s" path="res://resourceScenes/castle.tscn" id="2_nqbp8"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dvxk1"]
+sky_top_color = Color(0.47638565, 0.48138088, 0.110196, 1)
+sky_horizon_color = Color(0.8795308, 1.025483, 0.9442356, 1)
+ground_bottom_color = Color(0, 0.5788137, 0.62500894, 1)
+ground_horizon_color = Color(0.8795308, 1.025483, 0.9442356, 1)
+
+[sub_resource type="Sky" id="Sky_2dren"]
+sky_material = SubResource("ProceduralSkyMaterial_dvxk1")
+
+[sub_resource type="Environment" id="Environment_nqbp8"]
+background_mode = 2
+sky = SubResource("Sky_2dren")
+glow_enabled = true
+
+[node name="playableMap" type="Node3D" unique_id=653413343]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=627014830]
+environment = SubResource("Environment_nqbp8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=945055892]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=908923535]
+transform = Transform3D(0.9292335, 0.2210571, -0.2960724, 0.0125702275, 0.78191674, 0.62325615, 0.36927915, -0.58287215, 0.72380453, -5.1373444, 6.31676, 19.947662)
+
+[node name="outskirts" parent="." unique_id=1416845744 instance=ExtResource("1_2dren")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1)
+
+[node name="cameraPositions" type="Node3D" parent="." unique_id=467287240]
+
+[node name="marker1" type="Marker3D" parent="cameraPositions" unique_id=1911371371]
+transform = Transform3D(0.9292335, 0.2210571, -0.2960724, 0.0125702275, 0.78191674, 0.62325615, 0.36927915, -0.58287215, 0.72380453, -5.1373444, 6.31676, 19.947662)
+visible = false
+
+[node name="marker2" type="Marker3D" parent="cameraPositions" unique_id=932928404]
+transform = Transform3D(-0.5419549, -0.51848567, 0.6614057, 0.012570229, 0.78191674, 0.62325615, -0.84031355, 0.34609073, -0.4172461, 3.5079846, 6.31676, -9.781349)
+visible = false
+
+[node name="marker3" type="Marker3D" parent="cameraPositions" unique_id=733704232]
+transform = Transform3D(0.35010847, -0.5872912, 0.7297351, 0.012570273, 0.78191674, 0.6232562, -0.9366249, -0.20903428, 0.28113806, 4.393387, 6.31676, 8.362379)
+visible = false
+
+[node name="marker4" type="Marker3D" parent="cameraPositions" unique_id=957089806]
+transform = Transform3D(-0.50981855, 0.5412152, -0.6687086, 0.012570229, 0.78191674, 0.62325615, 0.8601902, 0.3093417, -0.40543884, -10.983618, 6.31676, -9.781349)
+visible = false
+
+[node name="Castle" parent="." unique_id=1713572374 instance=ExtResource("2_nqbp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.562942, 0.7242528, 17.52405)

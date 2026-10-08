@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://c6f5bmd1d1f6s"]
+
+[ext_resource type="PackedScene" uid="uid://douu4jdljyvba" path="res://assets/Models/GLB format/tower-round-base.glb" id="1_usg1p"]
+[ext_resource type="PackedScene" uid="uid://bitgfi0y1k46i" path="res://assets/Models/GLB format/tower-round-bottom-a.glb" id="2_2pkh0"]
+[ext_resource type="PackedScene" uid="uid://bpfjdrm5e5ybv" path="res://assets/Models/GLB format/tower-round-bottom-b.glb" id="3_oubo8"]
+[ext_resource type="PackedScene" uid="uid://rmfe3ygdiluo" path="res://assets/Models/GLB format/tower-round-bottom-c.glb" id="4_tpot0"]
+[ext_resource type="PackedScene" uid="uid://4he2nb5rmvrg" path="res://assets/Models/GLB format/tower-round-build-a.glb" id="5_agkth"]
+[ext_resource type="PackedScene" uid="uid://c7hqp2it27wsb" path="res://assets/Models/GLB format/tower-round-build-b.glb" id="6_ot42l"]
+[ext_resource type="PackedScene" uid="uid://cugrs82eekjpb" path="res://assets/Models/GLB format/tower-round-build-c.glb" id="7_fwrbo"]
+[ext_resource type="PackedScene" uid="uid://dtg70q21b8peu" path="res://assets/Models/GLB format/tower-round-build-d.glb" id="8_cm0an"]
+[ext_resource type="PackedScene" uid="uid://dl88x0lj1kqph" path="res://assets/Models/GLB format/tower-round-build-e.glb" id="9_i46ep"]
+[ext_resource type="PackedScene" uid="uid://bt4s3k6vqfn6a" path="res://assets/Models/GLB format/tower-round-build-f.glb" id="10_nv1vs"]
+[ext_resource type="PackedScene" uid="uid://dvqb5hnentaaj" path="res://assets/Models/GLB format/tower-square-build-a.glb" id="11_8k87x"]
+[ext_resource type="PackedScene" uid="uid://bbpf3xjspn80a" path="res://assets/Models/GLB format/tower-square-build-b.glb" id="12_agaqr"]
+[ext_resource type="PackedScene" uid="uid://b2b6ftqfv5lbo" path="res://assets/Models/GLB format/tower-square-build-c.glb" id="13_bflml"]
+[ext_resource type="PackedScene" uid="uid://cmjxbj8e7byx2" path="res://assets/Models/GLB format/tower-square-build-d.glb" id="14_roo8r"]
+[ext_resource type="PackedScene" uid="uid://osrqo0pfkv8v" path="res://assets/Models/GLB format/tower-square-build-e.glb" id="15_hn1iq"]
+[ext_resource type="PackedScene" uid="uid://cvy7dfaw5nitg" path="res://assets/Models/GLB format/tower-square-build-f.glb" id="16_44wwa"]
+
+[node name="Castle" type="Node3D" unique_id=1713572374]
+
+[node name="tower-round-base2" parent="." unique_id=468483917 instance=ExtResource("1_usg1p")]
+
+[node name="tower-round-bottom-a2" parent="." unique_id=2026189050 instance=ExtResource("2_2pkh0")]
+visible = false
+
+[node name="tower-round-bottom-b2" parent="." unique_id=983903640 instance=ExtResource("3_oubo8")]
+visible = false
+
+[node name="tower-round-bottom-c2" parent="." unique_id=1109589669 instance=ExtResource("4_tpot0")]
+visible = false
+
+[node name="tower-round-build-a2" parent="." unique_id=1293417119 instance=ExtResource("5_agkth")]
+visible = false
+
+[node name="tower-round-build-b2" parent="." unique_id=443355346 instance=ExtResource("6_ot42l")]
+visible = false
+
+[node name="tower-round-build-c2" parent="." unique_id=701320573 instance=ExtResource("7_fwrbo")]
+visible = false
+
+[node name="tower-round-build-d2" parent="." unique_id=1680920691 instance=ExtResource("8_cm0an")]
+visible = false
+
+[node name="tower-round-build-e2" parent="." unique_id=746715134 instance=ExtResource("9_i46ep")]
+visible = false
+
+[node name="tower-round-build-f2" parent="." unique_id=214960185 instance=ExtResource("10_nv1vs")]
+visible = false
+
+[node name="tower-square-build-a2" parent="." unique_id=92320253 instance=ExtResource("11_8k87x")]
+visible = false
+
+[node name="tower-square-build-b2" parent="." unique_id=1467274910 instance=ExtResource("12_agaqr")]
+visible = false
+
+[node name="tower-square-build-c2" parent="." unique_id=671264588 instance=ExtResource("13_bflml")]
+visible = false
+
+[node name="tower-square-build-d2" parent="." unique_id=294372821 instance=ExtResource("14_roo8r")]
+visible = false
+
+[node name="tower-square-build-e2" parent="." unique_id=564486601 instance=ExtResource("15_hn1iq")]
+visible = false
+
+[node name="tower-square-build-f2" parent="." unique_id=2139145419 instance=ExtResource("16_44wwa")]
+visible = false

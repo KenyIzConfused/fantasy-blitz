@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://g7i0wt3egb5x"]
+
+[ext_resource type="ArrayMesh" uid="uid://dtuhcbv2lcf2v" path="res://assets/Models/OBJ format/tile-end.obj" id="1_eiwyu"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lixdi"]
+points = PackedVector3Array(-0.5, 0, -0.5, -0.5, 0.1, -0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0.1, 0.5, 0.5, 0.1, -0.5, 0.5, 0, 0.5, 0.5, 0.1, 0.5)
+
+[node name="tileend" type="StaticBody3D" unique_id=258097618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.050435603, 0.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=760499258]
+shape = SubResource("ConvexPolygonShape3D_lixdi")
+
+[node name="tile" type="MeshInstance3D" parent="." unique_id=1577784861]
+mesh = ExtResource("1_eiwyu")

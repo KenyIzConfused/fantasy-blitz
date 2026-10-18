@@ -40,11 +40,11 @@ SLIDER PANEL
 
 USING THE SHADER IN YOUR OWN SCENE
   1. Add a MeshInstance3D with a subdivided plane (vertex waves need vertices
-     to act on).
+	 to act on).
   2. Assign one of the materials from Materials/ as Material Override.
   3. Place the plane over a dip in the terrain. There has to be geometry
-     underneath - over empty space there is nothing to measure and the water
-     goes flat.
+	 underneath - over empty space there is nothing to measure and the water
+	 goes flat.
 
 
 INCLUDED MATERIALS
@@ -55,13 +55,13 @@ INCLUDED MATERIALS
 
 DOCUMENTATION
   Documentation/EmacEArt_CoolWater_QuickStart_EN.pdf
-      Four pages: requirements, controls, the six parameter groups, and how to
-      put the water into a scene of your own.
+	  Four pages: requirements, controls, the six parameter groups, and how to
+	  put the water into a scene of your own.
 
   Documentation/EmacEArt_CoolWater_Documentation_EN.pdf
-      Twenty pages: all 27 parameters with their range and default, the three
-      vertex colour control channels, the three materials side by side, and a
-      list of things better left alone in the project.
+	  Twenty pages: all 27 parameters with their range and default, the three
+	  vertex colour control channels, the three materials side by side, and a
+	  list of things better left alone in the project.
 
 
 JOIN US ON DISCORD

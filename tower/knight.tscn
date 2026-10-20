@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://24gok6vrcae5"]
+
+[node name="knight" type="StaticBody3D" unique_id=1374681455]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1702982833]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1067743546]

@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dvtcql25hh4hl"]
+
+[ext_resource type="Script" uid="uid://dvkgdfcxe3aev" path="res://mobs/scripts for mobs/enemy.gd" id="1_0tun2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbrxv"]
+albedo_color = Color(1, 0, 0.16862746, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ditxn"]
+material = SubResource("StandardMaterial3D_jbrxv")
+height = 1.1977539
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v0s4m"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_v0s4m"]
+top_radius = 0.020507813
+bottom_radius = 0.020507813
+height = 1.1619873
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v0s4m"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ql73s"]
+material = SubResource("StandardMaterial3D_v0s4m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oeq8l"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_v0s4m"]
+material = SubResource("StandardMaterial3D_oeq8l")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0tun2"]
+albedo_color = Color(0.4382773, 0.43827733, 0.4382773, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_ql73s"]
+material = SubResource("StandardMaterial3D_0tun2")
+
+[node name="balloon" type="PathFollow3D" unique_id=1734689812]
+
+[node name="enemy" type="CharacterBody3D" parent="." unique_id=1474488020 groups=["Enemy"]]
+script = ExtResource("1_0tun2")
+
+[node name="balloon" type="MeshInstance3D" parent="enemy" unique_id=1829749271]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2873535, 0)
+mesh = SubResource("CapsuleMesh_ditxn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="enemy" unique_id=1763570398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50917757, 0)
+shape = SubResource("CapsuleShape3D_v0s4m")
+
+[node name="string" type="MeshInstance3D" parent="enemy" unique_id=18482638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41900635, 0)
+mesh = SubResource("CylinderMesh_v0s4m")
+
+[node name="eye" type="MeshInstance3D" parent="enemy" unique_id=22556920]
+transform = Transform3D(-1.236845e-08, 0, 0.55062604, 0, 0.44382674, 0, -0.28295717, 0, -2.4068628e-08, -0.0026048124, 1.4439604, -0.40214264)
+mesh = SubResource("SphereMesh_ql73s")
+
+[node name="iris" type="MeshInstance3D" parent="enemy" unique_id=1361481259]
+transform = Transform3D(-7.0697865e-09, 0, 0.29685348, 0, 0.24468492, 0, -0.16173786, 0, -1.2975878e-08, -0.0040841997, 1.4633741, -0.4707049)
+mesh = SubResource("SphereMesh_v0s4m")
+
+[node name="horns" type="MeshInstance3D" parent="enemy" unique_id=1649860194]
+transform = Transform3D(0.27293053, 0, 0, 0, 1.1606442, 0.032168753, 0, -0.5522742, 0.06760496, 0, 2.2762465, -0.5491902)
+mesh = SubResource("PrismMesh_ql73s")

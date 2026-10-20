@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://ce3m5hrpojx1s"]
+
+[ext_resource type="ArrayMesh" uid="uid://s4gk0pxmw1e2" path="res://assets/Models/OBJ format/weapon-ammo-arrow.obj" id="1_7qn06"]
+[ext_resource type="Script" uid="uid://cfywb6r8ky5vr" path="res://tower/towerScripts/arrow.gd" id="1_t7yxf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ql73s"]
+size = Vector3(0.29370117, 0.27093506, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v0s4m"]
+size = Vector3(0.54992676, 0.54125977, 1.2017822)
+
+[node name="arrow" type="CharacterBody3D" unique_id=1369384515]
+script = ExtResource("1_t7yxf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2109649213]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.07528336, 0)
+mesh = ExtResource("1_7qn06")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1225404604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008666992, 0.11449845, 0)
+shape = SubResource("BoxShape3D_ql73s")
+
+[node name="collision" type="Area3D" parent="." unique_id=311567851]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="collision" unique_id=72794817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.014709473, 0.10192871, 0.0020141602)
+shape = SubResource("BoxShape3D_v0s4m")
+
+[connection signal="body_entered" from="collision" to="." method="_on_collision_body_entered"]

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://vt73jnpcbx0l"]
+
+[ext_resource type="ArrayMesh" uid="uid://bkhy7qqjewr7b" path="res://assets/Models/OBJ format/weapon-ballista.obj" id="1_4ligm"]
+[ext_resource type="Script" uid="uid://dksogiorlynmm" path="res://tower/towerScripts/archer.gd" id="1_61xmd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kqmmw"]
+size = Vector3(1, 0.23754883, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ql73s"]
+radius = 6.165207
+
+[node name="archer" type="StaticBody3D" unique_id=1374681455]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
+script = ExtResource("1_61xmd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1702982833]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("1_4ligm")
+
+[node name="Aim" type="Marker3D" parent="MeshInstance3D" unique_id=326655632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45008934, 0.60655165)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1067743546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06311035, 0)
+shape = SubResource("BoxShape3D_kqmmw")
+
+[node name="mobDetector" type="Area3D" parent="." unique_id=373244034]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mobDetector" unique_id=1033445613]
+shape = SubResource("SphereShape3D_ql73s")
+debug_color = Color(0.8901961, 0, 0.16862746, 1)
+
+[node name="arrowContainer" type="Node" parent="." unique_id=352238751]
+
+[node name="shootCooldown" type="Timer" parent="." unique_id=1795541655]
+
+[connection signal="body_entered" from="mobDetector" to="." method="_on_mob_detector_body_entered"]
+[connection signal="body_exited" from="mobDetector" to="." method="_on_mob_detector_body_exited"]
+[connection signal="timeout" from="shootCooldown" to="." method="_on_shoot_cooldown_timeout"]

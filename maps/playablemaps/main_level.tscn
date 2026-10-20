@@ -1,10 +1,24 @@
 [gd_scene format=3 uid="uid://d2x4qofra3eq7"]
 
 [ext_resource type="PackedScene" uid="uid://3lylfm6bw7ka" path="res://maps/TILES/tile-spawn-end-round.tscn" id="1_ekb56"]
+[ext_resource type="Script" uid="uid://cgkrbip3jme72" path="res://maps/scripts for maps/main_level.gd" id="1_kqmmw"]
 [ext_resource type="PackedScene" uid="uid://qn2hnim7uocs" path="res://maps/TILES/tilestraight.tscn" id="2_kqmmw"]
 [ext_resource type="PackedScene" uid="uid://biho4wrhj404w" path="res://maps/TILES/tile-corner-square.tscn" id="3_cxuya"]
 [ext_resource type="PackedScene" uid="uid://g7i0wt3egb5x" path="res://maps/TILES/tile-end.tscn" id="4_dtx3v"]
 [ext_resource type="PackedScene" uid="uid://dy2sbqp4psslj" path="res://maps/TILES/tileGrass.tscn" id="5_c0d3d"]
+[ext_resource type="PackedScene" uid="uid://vt73jnpcbx0l" path="res://tower/archer.tscn" id="7_cxuya"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kqmmw"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_cxuya"]
+sky_material = SubResource("ProceduralSkyMaterial_kqmmw")
+
+[sub_resource type="Environment" id="Environment_dtx3v"]
+background_mode = 2
+sky = SubResource("Sky_cxuya")
+glow_enabled = true
 
 [sub_resource type="Curve3D" id="Curve3D_ekb56"]
 _data = {
@@ -14,6 +28,14 @@ _data = {
 point_count = 8
 
 [node name="MainLevel" type="Node3D" unique_id=2030342150]
+script = ExtResource("1_kqmmw")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2062091577]
+environment = SubResource("Environment_dtx3v")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=172397970]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
 
 [node name="map1" type="Node3D" parent="." unique_id=1945793919]
 
@@ -871,5 +893,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, -0.5)
 [node name="tileGrass219" parent="map1" unique_id=1199981199 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, 0.5)
 
-[node name="Path3D" type="Path3D" parent="." unique_id=1803089293]
+[node name="Path" type="Path3D" parent="." unique_id=1803089293]
 curve = SubResource("Curve3D_ekb56")
+
+[node name="spawnTimer" type="Timer" parent="." unique_id=968629598]
+wait_time = 2.0
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=2125735908]
+transform = Transform3D(0.99941945, -0.0062360074, 0.033493634, -0.014692305, 0.80810064, 0.588861, -0.030738376, -0.5890113, 0.80753994, 7, 7, 11)
+
+[node name="archer" parent="." unique_id=1374681455 instance=ExtResource("7_cxuya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 5.5)
+
+[node name="archer2" parent="." unique_id=1312013433 instance=ExtResource("7_cxuya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 5.5)
+
+[connection signal="timeout" from="spawnTimer" to="." method="_on_timer_timeout"]

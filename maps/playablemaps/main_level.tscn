@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://biho4wrhj404w" path="res://maps/TILES/tile-corner-square.tscn" id="3_cxuya"]
 [ext_resource type="PackedScene" uid="uid://g7i0wt3egb5x" path="res://maps/TILES/tile-end.tscn" id="4_dtx3v"]
 [ext_resource type="PackedScene" uid="uid://dy2sbqp4psslj" path="res://maps/TILES/tileGrass.tscn" id="5_c0d3d"]
+[ext_resource type="PackedScene" uid="uid://vt73jnpcbx0l" path="res://tower/archer.tscn" id="7_cxuya"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kqmmw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -899,6 +900,12 @@ curve = SubResource("Curve3D_ekb56")
 wait_time = 2.0
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2125735908]
-transform = Transform3D(0.6830127, -0.25881907, 0.6830127, -0.006236002, 0.9330127, 0.35978943, -0.7303799, -0.25, 0.63564557, 19, 7, 9)
+transform = Transform3D(0.99941945, -0.0062360074, 0.033493634, -0.014692305, 0.80810064, 0.588861, -0.030738376, -0.5890113, 0.80753994, 7, 7, 11)
+
+[node name="archer" parent="." unique_id=1374681455 instance=ExtResource("7_cxuya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 5.5)
+
+[node name="archer2" parent="." unique_id=1312013433 instance=ExtResource("7_cxuya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 5.5)
 
 [connection signal="timeout" from="spawnTimer" to="." method="_on_timer_timeout"]

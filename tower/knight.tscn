@@ -1,7 +1,26 @@
 [gd_scene format=3 uid="uid://24gok6vrcae5"]
 
+[ext_resource type="ArrayMesh" uid="uid://da2tb74ho04jk" path="res://assets/Models/OBJ format/weapon-cannon.obj" id="1_34fy7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kqmmw"]
+size = Vector3(1, 0.23754883, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ql73s"]
+radius = 2.042673
+
 [node name="knight" type="StaticBody3D" unique_id=1374681455]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1702982833]
+mesh = ExtResource("1_34fy7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1067743546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06311035, 0)
+shape = SubResource("BoxShape3D_kqmmw")
+
+[node name="Aim" type="Marker3D" parent="." unique_id=326655632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45008934, 0.3568613)
+
+[node name="mobDetector" type="Area3D" parent="." unique_id=373244034]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mobDetector" unique_id=1033445613]
+shape = SubResource("SphereShape3D_ql73s")

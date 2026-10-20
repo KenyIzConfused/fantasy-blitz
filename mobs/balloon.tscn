@@ -35,7 +35,7 @@ material = SubResource("StandardMaterial3D_0tun2")
 
 [node name="balloon" type="PathFollow3D" unique_id=1734689812]
 
-[node name="enemy" type="CharacterBody3D" parent="." unique_id=1474488020]
+[node name="enemy" type="CharacterBody3D" parent="." unique_id=1474488020 groups=["Enemy"]]
 script = ExtResource("1_0tun2")
 
 [node name="balloon" type="MeshInstance3D" parent="enemy" unique_id=1829749271]

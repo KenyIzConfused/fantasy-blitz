@@ -2,7 +2,7 @@ extends Node3D
 
 @onready var enemy : PackedScene = preload("res://mobs/balloon.tscn")
 
-var enemies_to_spawn : int = 3
+var enemies_to_spawn : int = 10
 var can_spawn : bool = true
 
 func _process(delta):

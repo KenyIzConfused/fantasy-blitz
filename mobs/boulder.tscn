@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://c4vcsn50qa87s"]
+
+[ext_resource type="Script" uid="uid://dvkgdfcxe3aev" path="res://mobs/scripts for mobs/enemy.gd" id="1_cfneq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v0s4m"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_mafvb"]
+noise_type = 0
+seed = 1
+frequency = 0.025
+fractal_octaves = 4
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_62j7p"]
+noise = SubResource("FastNoiseLite_mafvb")
+seamless = true
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_nuwfo"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_c0d3d"]
+noise = SubResource("FastNoiseLite_nuwfo")
+as_normal_map = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aggx7"]
+albedo_color = Color(0.4636374, 0.34257743, 0.18926245, 1)
+albedo_texture = SubResource("NoiseTexture2D_62j7p")
+normal_enabled = true
+normal_texture = SubResource("NoiseTexture2D_c0d3d")
+heightmap_enabled = true
+heightmap_scale = 0.02
+
+[sub_resource type="SphereMesh" id="SphereMesh_n4yop"]
+material = SubResource("StandardMaterial3D_aggx7")
+radius = 0.7
+height = 1.4
+radial_segments = 10
+rings = 8
+
+[sub_resource type="SphereMesh" id="SphereMesh_lcd6e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6jpot"]
+albedo_color = Color(0.44894964, 1.3055467e-06, 9.62615e-08, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ovwjj"]
+material = SubResource("StandardMaterial3D_6jpot")
+
+[sub_resource type="Animation" id="Animation_uluj4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boulder:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_cfneq"]
+resource_name = "walk"
+length = 4.0333333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("boulder:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 3.9666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(12.566371, 0, 0), Vector3(6.2831855, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vw7yn"]
+_data = {
+&"RESET": SubResource("Animation_uluj4"),
+&"walk": SubResource("Animation_cfneq")
+}
+
+[node name="boulder" type="PathFollow3D" unique_id=1734689812]
+
+[node name="enemy" type="CharacterBody3D" parent="." unique_id=1474488020 groups=["Enemy"]]
+script = ExtResource("1_cfneq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="enemy" unique_id=1763570398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.50917757, 0)
+visible = false
+shape = SubResource("CapsuleShape3D_v0s4m")
+
+[node name="boulder" type="MeshInstance3D" parent="enemy" unique_id=284809926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68298376, 0)
+mesh = SubResource("SphereMesh_n4yop")
+
+[node name="eyes" type="MeshInstance3D" parent="enemy" unique_id=1175786630]
+transform = Transform3D(0.5099166, 0, 0, 0, 0.35237354, 0, 0, 0, 0.53013813, -0.022887468, 1.2703828, 0)
+mesh = SubResource("SphereMesh_lcd6e")
+
+[node name="iris" type="MeshInstance3D" parent="enemy" unique_id=432294037]
+transform = Transform3D(0.18553784, 0, 0, 0, 0.124739625, 0, 0, 0, 0.17051595, 0, 1.4144881, 0)
+mesh = SubResource("SphereMesh_ovwjj")
+
+[node name="AnimationPlayerBoulder" type="AnimationPlayer" parent="enemy" unique_id=991011123]
+libraries/ = SubResource("AnimationLibrary_vw7yn")
+autoplay = &"walk"

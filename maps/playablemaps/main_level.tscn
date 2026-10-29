@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://g7i0wt3egb5x" path="res://maps/TILES/tile-end.tscn" id="4_dtx3v"]
 [ext_resource type="PackedScene" uid="uid://dy2sbqp4psslj" path="res://maps/TILES/tileGrass.tscn" id="5_c0d3d"]
 [ext_resource type="PackedScene" uid="uid://vt73jnpcbx0l" path="res://tower/archer.tscn" id="7_cxuya"]
+[ext_resource type="PackedScene" uid="uid://bkcd87noh404r" path="res://maps/TILES/tiledesign2.tscn" id="7_nuwfo"]
+[ext_resource type="PackedScene" uid="uid://bec7n4tb5agx0" path="res://maps/TILES/tiledesign1.tscn" id="8_pq4k2"]
+[ext_resource type="PackedScene" uid="uid://brqv1dkufjfku" path="res://maps/TILES/tiledesign3.tscn" id="9_bg3m8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kqmmw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -255,6 +258,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 4.5)
 [node name="tileGrass121" parent="map1" unique_id=470532567 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 4.5)
 
+[node name="tileGrass156" parent="map1" unique_id=67360561 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 3.5)
+
+[node name="tileGrass157" parent="map1" unique_id=94209571 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 3.5)
+
+[node name="tileGrass158" parent="map1" unique_id=1110429364 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 3.5)
+
+[node name="tileGrass380" parent="map1" unique_id=253189840 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 4.5)
+
+[node name="tileGrass381" parent="map1" unique_id=1891124484 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 4.5)
+
+[node name="tileGrass382" parent="map1" unique_id=410588322 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 4.5)
+
 [node name="tileGrass122" parent="map1" unique_id=1623797192 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 4.5)
 
@@ -423,6 +444,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 0.5)
 [node name="tileGrass136" parent="map1" unique_id=1539758725 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 1.5)
 
+[node name="tileGrass363" parent="map1" unique_id=1538790519 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 2.5)
+
+[node name="tileGrass364" parent="map1" unique_id=1505549252 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 4.5)
+
 [node name="tileGrass137" parent="map1" unique_id=1404013829 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 1.5)
 
@@ -458,6 +485,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, 1.5)
 
 [node name="tileGrass204" parent="map1" unique_id=67949949 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 1.5)
+
+[node name="tileGrass320" parent="map1" unique_id=1135554398 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, 2.5)
+
+[node name="tileGrass321" parent="map1" unique_id=1156982469 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, 2.5)
+
+[node name="tileGrass322" parent="map1" unique_id=37237259 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, 2.5)
+
+[node name="tileGrass323" parent="map1" unique_id=498024322 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 2.5)
 
 [node name="tileGrass205" parent="map1" unique_id=1319309063 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 1.5)
@@ -513,6 +552,72 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -2.5)
 [node name="tileGrass154" parent="map1" unique_id=1686513123 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -2.5)
 
+[node name="tileGrass461" parent="map1" unique_id=231443951 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -3.5)
+
+[node name="tileGrass462" parent="map1" unique_id=761284231 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -3.5)
+
+[node name="tileGrass463" parent="map1" unique_id=363804264 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -3.5)
+
+[node name="tileGrass464" parent="map1" unique_id=812952267 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -3.5)
+
+[node name="tileGrass465" parent="map1" unique_id=1250205071 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -6.5)
+
+[node name="tileGrass466" parent="map1" unique_id=1046803224 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -6.5)
+
+[node name="tileGrass467" parent="map1" unique_id=254631469 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -6.5)
+
+[node name="tileGrass468" parent="map1" unique_id=1727399560 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -6.5)
+
+[node name="tileGrass469" parent="map1" unique_id=729477252 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -7.5)
+
+[node name="tileGrass470" parent="map1" unique_id=717460649 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -7.5)
+
+[node name="tileGrass471" parent="map1" unique_id=597480568 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -7.5)
+
+[node name="tileGrass472" parent="map1" unique_id=1384372857 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -7.5)
+
+[node name="tileGrass473" parent="map1" unique_id=1740685459 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -8.5)
+
+[node name="tileGrass474" parent="map1" unique_id=360215072 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -8.5)
+
+[node name="tileGrass475" parent="map1" unique_id=321236452 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -8.5)
+
+[node name="tileGrass476" parent="map1" unique_id=1405593924 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -8.5)
+
+[node name="tileGrass477" parent="map1" unique_id=800455279 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -5.5)
+
+[node name="tileGrass478" parent="map1" unique_id=2015258310 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -5.5)
+
+[node name="tileGrass479" parent="map1" unique_id=425201433 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -5.5)
+
+[node name="tileGrass481" parent="map1" unique_id=494897065 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -4.5)
+
+[node name="tileGrass482" parent="map1" unique_id=858706768 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -4.5)
+
+[node name="tileGrass483" parent="map1" unique_id=781464372 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -4.5)
+
 [node name="tileGrass155" parent="map1" unique_id=1241798759 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -2.5)
 
@@ -528,25 +633,250 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 1.5)
 [node name="tileGrass74" parent="map1" unique_id=2034354875 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 2.5)
 
-[node name="tileGrass75" parent="map1" unique_id=1572187758 instance=ExtResource("5_c0d3d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 3.5)
-
-[node name="tileGrass156" parent="map1" unique_id=1224248739 instance=ExtResource("5_c0d3d")]
+[node name="tileGrass159" parent="map1" unique_id=2108357847 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -1.5)
 
-[node name="tileGrass157" parent="map1" unique_id=315669744 instance=ExtResource("5_c0d3d")]
+[node name="tileGrass160" parent="map1" unique_id=151745028 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -2.5)
 
-[node name="tileGrass158" parent="map1" unique_id=677412783 instance=ExtResource("5_c0d3d")]
+[node name="tileGrass161" parent="map1" unique_id=1990665643 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -0.5)
 
-[node name="tileGrass159" parent="map1" unique_id=879050188 instance=ExtResource("5_c0d3d")]
+[node name="tileGrass383" parent="map1" unique_id=358071156 instance=ExtResource("5_c0d3d")]
 
-[node name="tileGrass160" parent="map1" unique_id=1238881885 instance=ExtResource("5_c0d3d")]
+[node name="tileGrass384" parent="map1" unique_id=2027951960 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 1.5)
 
-[node name="tileGrass161" parent="map1" unique_id=1229170128 instance=ExtResource("5_c0d3d")]
+[node name="tileGrass385" parent="map1" unique_id=1695216854 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 2.5)
+
+[node name="tileGrass386" parent="map1" unique_id=122106738 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -1.5)
+
+[node name="tileGrass387" parent="map1" unique_id=1261617940 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -2.5)
+
+[node name="tileGrass408" parent="map1" unique_id=1447993518 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -2.5)
+
+[node name="tileGrass388" parent="map1" unique_id=2140351664 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -0.5)
+
+[node name="tileGrass389" parent="map1" unique_id=1049880388 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0.5)
+
+[node name="tileGrass390" parent="map1" unique_id=613036617 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 1.5)
+
+[node name="tileGrass391" parent="map1" unique_id=453268761 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 2.5)
+
+[node name="tileGrass392" parent="map1" unique_id=1171013877 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -1.5)
+
+[node name="tileGrass393" parent="map1" unique_id=2046877750 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -2.5)
+
+[node name="tileGrass394" parent="map1" unique_id=2121160944 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -0.5)
+
+[node name="tileGrass395" parent="map1" unique_id=1604151157 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 0.5)
+
+[node name="tileGrass396" parent="map1" unique_id=1851250476 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 1.5)
+
+[node name="tileGrass397" parent="map1" unique_id=1854807573 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 2.5)
+
+[node name="tileGrass404" parent="map1" unique_id=986418942 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -0.5)
+
+[node name="tileGrass405" parent="map1" unique_id=1111122367 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0.5)
+
+[node name="tileGrass406" parent="map1" unique_id=1178440238 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 1.5)
+
+[node name="tileGrass407" parent="map1" unique_id=93698106 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 2.5)
+
+[node name="tileGrass398" parent="map1" unique_id=1413008320 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -1.5)
+
+[node name="tileGrass399" parent="map1" unique_id=1819744360 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -2.5)
+
+[node name="tileGrass409" parent="map1" unique_id=1042350838 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -3.5)
+
+[node name="tileGrass410" parent="map1" unique_id=1026223406 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -3.5)
+
+[node name="tileGrass411" parent="map1" unique_id=1514203842 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -3.5)
+
+[node name="tileGrass412" parent="map1" unique_id=1761488563 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -3.5)
+
+[node name="tileGrass413" parent="map1" unique_id=39030637 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -3.5)
+
+[node name="tileGrass414" parent="map1" unique_id=704072223 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -3.5)
+
+[node name="tileGrass415" parent="map1" unique_id=644649895 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -3.5)
+
+[node name="tileGrass416" parent="map1" unique_id=1162123746 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -3.5)
+
+[node name="tileGrass417" parent="map1" unique_id=1727340156 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -3.5)
+
+[node name="tileGrass418" parent="map1" unique_id=1960904258 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -4.5)
+
+[node name="tileGrass419" parent="map1" unique_id=1810299223 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -4.5)
+
+[node name="tileGrass420" parent="map1" unique_id=995814366 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -4.5)
+
+[node name="tileGrass421" parent="map1" unique_id=1401181286 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -4.5)
+
+[node name="tileGrass422" parent="map1" unique_id=1269320967 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -4.5)
+
+[node name="tileGrass423" parent="map1" unique_id=1003537852 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -4.5)
+
+[node name="tileGrass424" parent="map1" unique_id=282175221 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -4.5)
+
+[node name="tileGrass425" parent="map1" unique_id=2099896332 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -4.5)
+
+[node name="tileGrass426" parent="map1" unique_id=555514940 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -4.5)
+
+[node name="tileGrass427" parent="map1" unique_id=1472831551 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -5.5)
+
+[node name="tileGrass428" parent="map1" unique_id=2025167296 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -5.5)
+
+[node name="tileGrass454" parent="map1" unique_id=945655443 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -6.5)
+
+[node name="tileGrass429" parent="map1" unique_id=751056540 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -5.5)
+
+[node name="tileGrass430" parent="map1" unique_id=2114198144 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -5.5)
+
+[node name="tileGrass431" parent="map1" unique_id=1401972780 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -5.5)
+
+[node name="tileGrass455" parent="map1" unique_id=941706995 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -6.5)
+
+[node name="tileGrass456" parent="map1" unique_id=2073088221 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -6.5)
+
+[node name="tileGrass457" parent="map1" unique_id=1161349434 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -6.5)
+
+[node name="tileGrass458" parent="map1" unique_id=448588266 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -7.5)
+
+[node name="tileGrass459" parent="map1" unique_id=120366495 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -7.5)
+
+[node name="tileGrass460" parent="map1" unique_id=382405667 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -7.5)
+
+[node name="tileGrass432" parent="map1" unique_id=2084752039 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -5.5)
+
+[node name="tileGrass433" parent="map1" unique_id=734539585 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -5.5)
+
+[node name="tileGrass434" parent="map1" unique_id=720389506 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -5.5)
+
+[node name="tileGrass435" parent="map1" unique_id=10094892 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -5.5)
+
+[node name="tileGrass436" parent="map1" unique_id=472680067 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -8.5)
+
+[node name="tileGrass437" parent="map1" unique_id=92045009 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -8.5)
+
+[node name="tileGrass438" parent="map1" unique_id=963483910 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -8.5)
+
+[node name="tileGrass439" parent="map1" unique_id=878803629 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -8.5)
+
+[node name="tileGrass440" parent="map1" unique_id=1769856718 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -8.5)
+
+[node name="tileGrass453" parent="map1" unique_id=954196242 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -7.5)
+
+[node name="tileGrass441" parent="map1" unique_id=725086406 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -8.5)
+
+[node name="tileGrass442" parent="map1" unique_id=2113749587 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -8.5)
+
+[node name="tileGrass443" parent="map1" unique_id=469307609 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -8.5)
+
+[node name="tileGrass444" parent="map1" unique_id=1142299102 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -8.5)
+
+[node name="tileGrass445" parent="map1" unique_id=470988895 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -7.5)
+
+[node name="tileGrass446" parent="map1" unique_id=571796019 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -7.5)
+
+[node name="tileGrass447" parent="map1" unique_id=1956225596 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -7.5)
+
+[node name="tileGrass448" parent="map1" unique_id=1924566929 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -7.5)
+
+[node name="tileGrass449" parent="map1" unique_id=1875814811 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -6.5)
+
+[node name="tileGrass450" parent="map1" unique_id=1713861088 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -6.5)
+
+[node name="tileGrass451" parent="map1" unique_id=457719538 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -6.5)
+
+[node name="tileGrass452" parent="map1" unique_id=1754302710 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -6.5)
+
+[node name="tileGrass400" parent="map1" unique_id=1764951161 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -0.5)
+
+[node name="tileGrass401" parent="map1" unique_id=104059002 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 0.5)
+
+[node name="tileGrass402" parent="map1" unique_id=579491508 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 1.5)
+
+[node name="tileGrass403" parent="map1" unique_id=1470455880 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 2.5)
+
+[node name="tileGrass75" parent="map1" unique_id=1572187758 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 3.5)
 
 [node name="tileGrass162" parent="map1" unique_id=1765853323 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 3.5)
@@ -638,6 +968,69 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 3.5)
 [node name="tileGrass143" parent="map1" unique_id=1933512469 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 4.5)
 
+[node name="tileGrass354" parent="map1" unique_id=900411403 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 2.5)
+
+[node name="tileGrass355" parent="map1" unique_id=1517207570 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 3.5)
+
+[node name="tileGrass356" parent="map1" unique_id=2067957355 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 4.5)
+
+[node name="tileGrass357" parent="map1" unique_id=1845549992 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 2.5)
+
+[node name="tileGrass358" parent="map1" unique_id=278732618 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 3.5)
+
+[node name="tileGrass359" parent="map1" unique_id=637654233 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 4.5)
+
+[node name="tileGrass360" parent="map1" unique_id=1778701841 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 2.5)
+
+[node name="tileGrass361" parent="map1" unique_id=12791650 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 3.5)
+
+[node name="tileGrass362" parent="map1" unique_id=1753389829 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 4.5)
+
+[node name="tileGrass368" parent="map1" unique_id=817850706 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 5.5)
+
+[node name="tileGrass369" parent="map1" unique_id=535627721 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 5.5)
+
+[node name="tileGrass370" parent="map1" unique_id=440973116 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 5.5)
+
+[node name="tileGrass371" parent="map1" unique_id=1149708794 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 6.5)
+
+[node name="tileGrass372" parent="map1" unique_id=1297743327 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 6.5)
+
+[node name="tileGrass373" parent="map1" unique_id=212256747 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 6.5)
+
+[node name="tileGrass374" parent="map1" unique_id=140705592 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 7.5)
+
+[node name="tileGrass375" parent="map1" unique_id=1092127041 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 7.5)
+
+[node name="tileGrass376" parent="map1" unique_id=2063348383 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 7.5)
+
+[node name="tileGrass377" parent="map1" unique_id=2028702175 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 8.5)
+
+[node name="tileGrass378" parent="map1" unique_id=559928497 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 8.5)
+
+[node name="tileGrass379" parent="map1" unique_id=689516383 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 8.5)
+
 [node name="tileGrass144" parent="map1" unique_id=1731673209 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 5.5)
 
@@ -649,6 +1042,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 7.5)
 
 [node name="tileGrass147" parent="map1" unique_id=467090358 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 8.5)
+
+[node name="tileGrass365" parent="map1" unique_id=920040562 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 6.5)
+
+[node name="tileGrass366" parent="map1" unique_id=1512490003 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 7.5)
+
+[node name="tileGrass367" parent="map1" unique_id=306760114 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 8.5)
 
 [node name="tileGrass135" parent="map1" unique_id=1433848404 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 8.5)
@@ -694,6 +1096,177 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, 0.5)
 
 [node name="tileGrass226" parent="map1" unique_id=565027603 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, 1.5)
+
+[node name="tileGrass293" parent="map1" unique_id=479128831 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 2.5)
+
+[node name="tileGrass294" parent="map1" unique_id=1114976982 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 2.5)
+
+[node name="tileGrass295" parent="map1" unique_id=2005880950 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, 2.5)
+
+[node name="tileGrass296" parent="map1" unique_id=1512053002 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, 2.5)
+
+[node name="tileGrass297" parent="map1" unique_id=2061673093 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 3.5)
+
+[node name="tileGrass298" parent="map1" unique_id=911190417 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 3.5)
+
+[node name="tileGrass299" parent="map1" unique_id=1426947981 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, 3.5)
+
+[node name="tileGrass317" parent="map1" unique_id=1435560114 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 4.5)
+
+[node name="tileGrass318" parent="map1" unique_id=2123742558 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 4.5)
+
+[node name="tileGrass319" parent="map1" unique_id=290533883 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, 4.5)
+
+[node name="tileGrass300" parent="map1" unique_id=1866558007 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, 3.5)
+
+[node name="tileGrass301" parent="map1" unique_id=512406156 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 5.5)
+
+[node name="tileGrass302" parent="map1" unique_id=463087665 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 5.5)
+
+[node name="tileGrass303" parent="map1" unique_id=442475651 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, 5.5)
+
+[node name="tileGrass304" parent="map1" unique_id=564094182 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, 5.5)
+
+[node name="tileGrass305" parent="map1" unique_id=1646921764 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 6.5)
+
+[node name="tileGrass306" parent="map1" unique_id=1516933046 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 6.5)
+
+[node name="tileGrass307" parent="map1" unique_id=2065058680 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, 6.5)
+
+[node name="tileGrass308" parent="map1" unique_id=1375842646 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, 6.5)
+
+[node name="tileGrass309" parent="map1" unique_id=453190967 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 7.5)
+
+[node name="tileGrass310" parent="map1" unique_id=158475638 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 7.5)
+
+[node name="tileGrass311" parent="map1" unique_id=563359876 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, 7.5)
+
+[node name="tileGrass312" parent="map1" unique_id=2115809275 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, 7.5)
+
+[node name="tileGrass313" parent="map1" unique_id=1974778727 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 8.5)
+
+[node name="tileGrass324" parent="map1" unique_id=116888072 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, 3.5)
+
+[node name="tileGrass325" parent="map1" unique_id=981300537 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, 4.5)
+
+[node name="tileGrass326" parent="map1" unique_id=2132452186 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, 5.5)
+
+[node name="tileGrass327" parent="map1" unique_id=278677937 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, 6.5)
+
+[node name="tileGrass328" parent="map1" unique_id=1403460242 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, 7.5)
+
+[node name="tileGrass329" parent="map1" unique_id=460310200 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, 8.5)
+
+[node name="tileGrass330" parent="map1" unique_id=2045995263 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, 3.5)
+
+[node name="tileGrass331" parent="map1" unique_id=491194312 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, 4.5)
+
+[node name="tileGrass332" parent="map1" unique_id=336089748 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, 5.5)
+
+[node name="tileGrass333" parent="map1" unique_id=2054575949 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, 6.5)
+
+[node name="tileGrass334" parent="map1" unique_id=25678654 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, 7.5)
+
+[node name="tileGrass335" parent="map1" unique_id=20249207 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, 8.5)
+
+[node name="tileGrass336" parent="map1" unique_id=1314837821 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, 3.5)
+
+[node name="tileGrass337" parent="map1" unique_id=618932785 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, 4.5)
+
+[node name="tileGrass338" parent="map1" unique_id=878821111 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, 5.5)
+
+[node name="tileGrass339" parent="map1" unique_id=428536672 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, 6.5)
+
+[node name="tileGrass340" parent="map1" unique_id=1846603829 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, 7.5)
+
+[node name="tileGrass341" parent="map1" unique_id=1449890190 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, 8.5)
+
+[node name="tileGrass342" parent="map1" unique_id=1026735318 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, 3.5)
+
+[node name="tileGrass343" parent="map1" unique_id=2050073804 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, 4.5)
+
+[node name="tileGrass344" parent="map1" unique_id=662942457 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, 5.5)
+
+[node name="tileGrass345" parent="map1" unique_id=440194110 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, 6.5)
+
+[node name="tileGrass346" parent="map1" unique_id=1980147584 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, 7.5)
+
+[node name="tileGrass347" parent="map1" unique_id=175892296 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, 8.5)
+
+[node name="tileGrass348" parent="map1" unique_id=456836197 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 3.5)
+
+[node name="tileGrass349" parent="map1" unique_id=1974795809 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 4.5)
+
+[node name="tileGrass350" parent="map1" unique_id=1660901474 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 5.5)
+
+[node name="tileGrass351" parent="map1" unique_id=1712409513 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 6.5)
+
+[node name="tileGrass352" parent="map1" unique_id=868252978 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 7.5)
+
+[node name="tileGrass353" parent="map1" unique_id=1596564471 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 8.5)
+
+[node name="tileGrass314" parent="map1" unique_id=1938929427 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 8.5)
+
+[node name="tileGrass315" parent="map1" unique_id=1328752481 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, 8.5)
+
+[node name="tileGrass316" parent="map1" unique_id=1027788451 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, 8.5)
 
 [node name="tileGrass98" parent="map1" unique_id=1267710318 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, -7.5)
@@ -809,6 +1382,72 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, -2.5)
 [node name="tileGrass194" parent="map1" unique_id=157380900 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, -8.5)
 
+[node name="tileGrass243" parent="map1" unique_id=1350653617 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, -7.5)
+
+[node name="tileGrass244" parent="map1" unique_id=547463752 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, -6.5)
+
+[node name="tileGrass245" parent="map1" unique_id=971067698 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, -5.5)
+
+[node name="tileGrass246" parent="map1" unique_id=1054149767 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, -4.5)
+
+[node name="tileGrass247" parent="map1" unique_id=1136180027 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, -8.5)
+
+[node name="tileGrass231" parent="map1" unique_id=1621347954 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, -7.5)
+
+[node name="tileGrass232" parent="map1" unique_id=281286140 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, -6.5)
+
+[node name="tileGrass233" parent="map1" unique_id=1852677371 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, -5.5)
+
+[node name="tileGrass234" parent="map1" unique_id=846751872 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, -4.5)
+
+[node name="tileGrass235" parent="map1" unique_id=1283616719 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, -3.5)
+
+[node name="tileGrass248" parent="map1" unique_id=1166200195 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, -6.5)
+
+[node name="tileGrass249" parent="map1" unique_id=1002371194 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, -5.5)
+
+[node name="tileGrass250" parent="map1" unique_id=858412447 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, -4.5)
+
+[node name="tileGrass251" parent="map1" unique_id=707012493 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, -3.5)
+
+[node name="tileGrass236" parent="map1" unique_id=67235926 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, -8.5)
+
+[node name="tileGrass252" parent="map1" unique_id=1040923101 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, -8.5)
+
+[node name="tileGrass237" parent="map1" unique_id=926128955 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, -7.5)
+
+[node name="tileGrass238" parent="map1" unique_id=1757853376 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, -6.5)
+
+[node name="tileGrass239" parent="map1" unique_id=120644828 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, -5.5)
+
+[node name="tileGrass240" parent="map1" unique_id=1477623701 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, -4.5)
+
+[node name="tileGrass241" parent="map1" unique_id=1362515143 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, -3.5)
+
+[node name="tileGrass242" parent="map1" unique_id=1899701475 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, -8.5)
+
 [node name="tileGrass185" parent="map1" unique_id=865365434 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -8.5)
 
@@ -875,6 +1514,684 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, 7.5)
 [node name="tileGrass213" parent="map1" unique_id=2031822388 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, 8.5)
 
+[node name="tileGrass253" parent="map1" unique_id=1890284919 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 1.5)
+
+[node name="tileGrass254" parent="map1" unique_id=1709919621 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 2.5)
+
+[node name="tileGrass255" parent="map1" unique_id=1526130037 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 3.5)
+
+[node name="tileGrass256" parent="map1" unique_id=1162776353 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 4.5)
+
+[node name="tileGrass257" parent="map1" unique_id=162950199 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 5.5)
+
+[node name="tileGrass258" parent="map1" unique_id=113531976 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 6.5)
+
+[node name="tileGrass259" parent="map1" unique_id=533041140 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 7.5)
+
+[node name="tileGrass260" parent="map1" unique_id=32721694 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 8.5)
+
+[node name="tileGrass261" parent="map1" unique_id=1015219925 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 1.5)
+
+[node name="tileGrass262" parent="map1" unique_id=1821615449 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 2.5)
+
+[node name="tileGrass263" parent="map1" unique_id=630057525 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 3.5)
+
+[node name="tileGrass264" parent="map1" unique_id=308574348 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 4.5)
+
+[node name="tileGrass265" parent="map1" unique_id=6736390 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 5.5)
+
+[node name="tileGrass266" parent="map1" unique_id=219896171 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 6.5)
+
+[node name="tileGrass267" parent="map1" unique_id=329212947 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 7.5)
+
+[node name="tileGrass268" parent="map1" unique_id=1261839424 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 8.5)
+
+[node name="tileGrass269" parent="map1" unique_id=719720281 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 1.5)
+
+[node name="tileGrass270" parent="map1" unique_id=748158452 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 2.5)
+
+[node name="tileGrass271" parent="map1" unique_id=1454598179 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 3.5)
+
+[node name="tileGrass272" parent="map1" unique_id=1844959699 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 4.5)
+
+[node name="tileGrass273" parent="map1" unique_id=679425558 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 5.5)
+
+[node name="tileGrass274" parent="map1" unique_id=374697783 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 6.5)
+
+[node name="tileGrass275" parent="map1" unique_id=1606582166 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 7.5)
+
+[node name="tileGrass276" parent="map1" unique_id=1602116757 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 8.5)
+
+[node name="tileGrass277" parent="map1" unique_id=39228082 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 1.5)
+
+[node name="tileGrass278" parent="map1" unique_id=81813224 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 2.5)
+
+[node name="tileGrass279" parent="map1" unique_id=1280145737 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 3.5)
+
+[node name="tileGrass280" parent="map1" unique_id=1202277295 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 4.5)
+
+[node name="tileGrass281" parent="map1" unique_id=1949033868 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 5.5)
+
+[node name="tileGrass282" parent="map1" unique_id=37419177 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 6.5)
+
+[node name="tileGrass283" parent="map1" unique_id=748297773 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 7.5)
+
+[node name="tileGrass284" parent="map1" unique_id=778682847 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 8.5)
+
+[node name="tileGrass285" parent="map1" unique_id=851319897 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 1.5)
+
+[node name="tileGrass286" parent="map1" unique_id=1441672027 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 2.5)
+
+[node name="tileGrass287" parent="map1" unique_id=159084998 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 3.5)
+
+[node name="tileGrass288" parent="map1" unique_id=279157720 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 4.5)
+
+[node name="tileGrass289" parent="map1" unique_id=2038201074 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 5.5)
+
+[node name="tileGrass290" parent="map1" unique_id=884363343 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 6.5)
+
+[node name="tileGrass291" parent="map1" unique_id=974070158 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 7.5)
+
+[node name="tileGrass292" parent="map1" unique_id=849386047 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 8.5)
+
+[node name="tileGrass501" parent="map1" unique_id=1462881846 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 9.5)
+
+[node name="tileGrass502" parent="map1" unique_id=375036684 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 9.5)
+
+[node name="tileGrass503" parent="map1" unique_id=944546661 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 9.5)
+
+[node name="tileGrass504" parent="map1" unique_id=380324191 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 9.5)
+
+[node name="tileGrass505" parent="map1" unique_id=118523719 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 9.5)
+
+[node name="tileGrass506" parent="map1" unique_id=1030425222 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 9.5)
+
+[node name="tileGrass507" parent="map1" unique_id=527943088 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 9.5)
+
+[node name="tileGrass508" parent="map1" unique_id=1035811583 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 9.5)
+
+[node name="tileGrass509" parent="map1" unique_id=138652123 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 9.5)
+
+[node name="tileGrass510" parent="map1" unique_id=1759837973 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 9.5)
+
+[node name="tileGrass511" parent="map1" unique_id=107287856 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 9.5)
+
+[node name="tileGrass512" parent="map1" unique_id=15594095 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 9.5)
+
+[node name="tileGrass513" parent="map1" unique_id=1015582657 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 9.5)
+
+[node name="tileGrass514" parent="map1" unique_id=1699453621 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 9.5)
+
+[node name="tileGrass515" parent="map1" unique_id=1744854373 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 9.5)
+
+[node name="tileGrass516" parent="map1" unique_id=1389070504 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 9.5)
+
+[node name="tileGrass517" parent="map1" unique_id=672792215 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 9.5)
+
+[node name="tileGrass518" parent="map1" unique_id=1475544518 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 9.5)
+
+[node name="tileGrass519" parent="map1" unique_id=1691115628 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, 9.5)
+
+[node name="tileGrass520" parent="map1" unique_id=1539703526 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, 9.5)
+
+[node name="tileGrass521" parent="map1" unique_id=1696212298 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, 9.5)
+
+[node name="tileGrass522" parent="map1" unique_id=1258970062 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, 9.5)
+
+[node name="tileGrass523" parent="map1" unique_id=172459023 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 9.5)
+
+[node name="tileGrass524" parent="map1" unique_id=773136680 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 9.5)
+
+[node name="tileGrass525" parent="map1" unique_id=551423454 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, 9.5)
+
+[node name="tileGrass526" parent="map1" unique_id=269911013 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, 9.5)
+
+[node name="tileGrass527" parent="map1" unique_id=1852183073 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, 9.5)
+
+[node name="tileGrass528" parent="map1" unique_id=1202504722 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 9.5)
+
+[node name="tileGrass529" parent="map1" unique_id=945424220 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 9.5)
+
+[node name="tileGrass530" parent="map1" unique_id=1673628632 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 9.5)
+
+[node name="tileGrass531" parent="map1" unique_id=478111361 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 9.5)
+
+[node name="tileGrass532" parent="map1" unique_id=1318307144 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 10.5)
+
+[node name="tileGrass533" parent="map1" unique_id=166908819 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 10.5)
+
+[node name="tileGrass534" parent="map1" unique_id=635945364 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 10.5)
+
+[node name="tileGrass535" parent="map1" unique_id=190165089 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 10.5)
+
+[node name="tileGrass536" parent="map1" unique_id=660039358 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 10.5)
+
+[node name="tileGrass537" parent="map1" unique_id=1664458549 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 10.5)
+
+[node name="tileGrass538" parent="map1" unique_id=1661935203 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 10.5)
+
+[node name="tileGrass539" parent="map1" unique_id=353187114 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 10.5)
+
+[node name="tileGrass540" parent="map1" unique_id=2014980969 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 10.5)
+
+[node name="tileGrass541" parent="map1" unique_id=1358653330 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 10.5)
+
+[node name="tileGrass542" parent="map1" unique_id=391584918 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 10.5)
+
+[node name="tileGrass543" parent="map1" unique_id=1955989119 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 10.5)
+
+[node name="tileGrass544" parent="map1" unique_id=1675142417 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 10.5)
+
+[node name="tileGrass545" parent="map1" unique_id=1001685559 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 10.5)
+
+[node name="tileGrass546" parent="map1" unique_id=537042619 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 10.5)
+
+[node name="tileGrass547" parent="map1" unique_id=1297472600 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 10.5)
+
+[node name="tileGrass548" parent="map1" unique_id=964686660 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 10.5)
+
+[node name="tileGrass549" parent="map1" unique_id=1481939875 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 10.5)
+
+[node name="tileGrass550" parent="map1" unique_id=45908012 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, 10.5)
+
+[node name="tileGrass551" parent="map1" unique_id=1660636592 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, 10.5)
+
+[node name="tileGrass552" parent="map1" unique_id=1401429356 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, 10.5)
+
+[node name="tileGrass553" parent="map1" unique_id=1915227367 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, 10.5)
+
+[node name="tileGrass554" parent="map1" unique_id=990671263 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 10.5)
+
+[node name="tileGrass555" parent="map1" unique_id=308085264 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 10.5)
+
+[node name="tileGrass556" parent="map1" unique_id=625049015 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, 10.5)
+
+[node name="tileGrass557" parent="map1" unique_id=1435835103 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, 10.5)
+
+[node name="tileGrass558" parent="map1" unique_id=932861946 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, 10.5)
+
+[node name="tileGrass559" parent="map1" unique_id=915547097 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 10.5)
+
+[node name="tileGrass560" parent="map1" unique_id=2143656233 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 10.5)
+
+[node name="tileGrass561" parent="map1" unique_id=2097641922 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 10.5)
+
+[node name="tileGrass562" parent="map1" unique_id=1374190387 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 10.5)
+
+[node name="tileGrass563" parent="map1" unique_id=1852184955 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 11.5)
+
+[node name="tileGrass564" parent="map1" unique_id=553893884 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 11.5)
+
+[node name="tileGrass565" parent="map1" unique_id=410157228 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 11.5)
+
+[node name="tileGrass566" parent="map1" unique_id=1230728004 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 11.5)
+
+[node name="tileGrass567" parent="map1" unique_id=16078912 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, 11.5)
+
+[node name="tileGrass568" parent="map1" unique_id=234427120 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 11.5)
+
+[node name="tileGrass569" parent="map1" unique_id=334532006 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, 11.5)
+
+[node name="tileGrass570" parent="map1" unique_id=598643578 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 11.5)
+
+[node name="tileGrass571" parent="map1" unique_id=1866771658 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 11.5)
+
+[node name="tileGrass572" parent="map1" unique_id=109682134 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, 11.5)
+
+[node name="tileGrass573" parent="map1" unique_id=1401005067 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 11.5)
+
+[node name="tileGrass574" parent="map1" unique_id=303368829 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 11.5)
+
+[node name="tileGrass575" parent="map1" unique_id=2016374718 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, 11.5)
+
+[node name="tileGrass576" parent="map1" unique_id=1127855428 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 11.5)
+
+[node name="tileGrass577" parent="map1" unique_id=432097832 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 11.5)
+
+[node name="tileGrass578" parent="map1" unique_id=1527967945 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 11.5)
+
+[node name="tileGrass579" parent="map1" unique_id=1211846713 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 11.5)
+
+[node name="tileGrass580" parent="map1" unique_id=100691213 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, 11.5)
+
+[node name="tileGrass581" parent="map1" unique_id=752341456 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, 11.5)
+
+[node name="tileGrass582" parent="map1" unique_id=1582346194 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, 11.5)
+
+[node name="tileGrass583" parent="map1" unique_id=1295840146 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, 11.5)
+
+[node name="tileGrass584" parent="map1" unique_id=719149019 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, 11.5)
+
+[node name="tileGrass585" parent="map1" unique_id=1256159598 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, 11.5)
+
+[node name="tileGrass586" parent="map1" unique_id=1251390969 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 11.5)
+
+[node name="tileGrass587" parent="map1" unique_id=2023705822 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, 11.5)
+
+[node name="tileGrass588" parent="map1" unique_id=166044928 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, 11.5)
+
+[node name="tileGrass589" parent="map1" unique_id=950341665 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, 11.5)
+
+[node name="tileGrass590" parent="map1" unique_id=2112499866 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 11.5)
+
+[node name="tileGrass591" parent="map1" unique_id=663857688 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 11.5)
+
+[node name="tileGrass592" parent="map1" unique_id=1856591293 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 11.5)
+
+[node name="tileGrass593" parent="map1" unique_id=537952014 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 11.5)
+
+[node name="tileGrass594" parent="map1" unique_id=477045482 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -11.5)
+
+[node name="tileGrass595" parent="map1" unique_id=161741301 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -11.5)
+
+[node name="tileGrass596" parent="map1" unique_id=983325164 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -11.5)
+
+[node name="tileGrass597" parent="map1" unique_id=1549534565 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -11.5)
+
+[node name="tileGrass598" parent="map1" unique_id=1609576051 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -11.5)
+
+[node name="tileGrass599" parent="map1" unique_id=119414949 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -11.5)
+
+[node name="tileGrass600" parent="map1" unique_id=488370678 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, -11.5)
+
+[node name="tileGrass601" parent="map1" unique_id=1236243201 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, -11.5)
+
+[node name="tileGrass602" parent="map1" unique_id=1837462343 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -11.5)
+
+[node name="tileGrass603" parent="map1" unique_id=1809443356 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -11.5)
+
+[node name="tileGrass604" parent="map1" unique_id=687473313 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -11.5)
+
+[node name="tileGrass605" parent="map1" unique_id=1153033536 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -11.5)
+
+[node name="tileGrass606" parent="map1" unique_id=2028515718 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -11.5)
+
+[node name="tileGrass607" parent="map1" unique_id=321170226 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -11.5)
+
+[node name="tileGrass608" parent="map1" unique_id=194397197 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -11.5)
+
+[node name="tileGrass609" parent="map1" unique_id=1917585044 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -11.5)
+
+[node name="tileGrass610" parent="map1" unique_id=1049816909 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, -11.5)
+
+[node name="tileGrass611" parent="map1" unique_id=916217239 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, -11.5)
+
+[node name="tileGrass612" parent="map1" unique_id=16719756 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, -11.5)
+
+[node name="tileGrass613" parent="map1" unique_id=1268124653 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, -11.5)
+
+[node name="tileGrass614" parent="map1" unique_id=1443257438 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, -11.5)
+
+[node name="tileGrass615" parent="map1" unique_id=1575686368 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, -11.5)
+
+[node name="tileGrass616" parent="map1" unique_id=1454434941 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, -11.5)
+
+[node name="tileGrass617" parent="map1" unique_id=525423561 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, -11.5)
+
+[node name="tileGrass618" parent="map1" unique_id=27228379 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, -11.5)
+
+[node name="tileGrass619" parent="map1" unique_id=1474105513 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, -11.5)
+
+[node name="tileGrass620" parent="map1" unique_id=1605974547 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, -11.5)
+
+[node name="tileGrass621" parent="map1" unique_id=744394071 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -11.5)
+
+[node name="tileGrass622" parent="map1" unique_id=914818012 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, -11.5)
+
+[node name="tileGrass623" parent="map1" unique_id=1596394421 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, -11.5)
+
+[node name="tileGrass624" parent="map1" unique_id=2116152805 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -11.5)
+
+[node name="tileGrass625" parent="map1" unique_id=170862979 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -10.5)
+
+[node name="tileGrass626" parent="map1" unique_id=1175457541 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -10.5)
+
+[node name="tileGrass627" parent="map1" unique_id=151880974 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -10.5)
+
+[node name="tileGrass628" parent="map1" unique_id=2076597008 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -10.5)
+
+[node name="tileGrass629" parent="map1" unique_id=1817132613 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -10.5)
+
+[node name="tileGrass630" parent="map1" unique_id=543828562 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -10.5)
+
+[node name="tileGrass631" parent="map1" unique_id=1332360053 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, -10.5)
+
+[node name="tileGrass632" parent="map1" unique_id=1785485507 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, -10.5)
+
+[node name="tileGrass633" parent="map1" unique_id=942083186 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -10.5)
+
+[node name="tileGrass634" parent="map1" unique_id=196833419 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -10.5)
+
+[node name="tileGrass635" parent="map1" unique_id=907845378 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -10.5)
+
+[node name="tileGrass636" parent="map1" unique_id=47016417 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -10.5)
+
+[node name="tileGrass637" parent="map1" unique_id=1932344744 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -10.5)
+
+[node name="tileGrass638" parent="map1" unique_id=1658913822 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -10.5)
+
+[node name="tileGrass639" parent="map1" unique_id=832441681 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -10.5)
+
+[node name="tileGrass640" parent="map1" unique_id=508267001 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -10.5)
+
+[node name="tileGrass641" parent="map1" unique_id=1947929168 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, -10.5)
+
+[node name="tileGrass642" parent="map1" unique_id=990617651 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, -10.5)
+
+[node name="tileGrass643" parent="map1" unique_id=816692466 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, -10.5)
+
+[node name="tileGrass644" parent="map1" unique_id=1630999142 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, -10.5)
+
+[node name="tileGrass645" parent="map1" unique_id=1378590012 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, -10.5)
+
+[node name="tileGrass646" parent="map1" unique_id=1970635669 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, -10.5)
+
+[node name="tileGrass647" parent="map1" unique_id=1680354754 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, -10.5)
+
+[node name="tileGrass648" parent="map1" unique_id=250886537 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, -10.5)
+
+[node name="tileGrass649" parent="map1" unique_id=1359795532 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, -10.5)
+
+[node name="tileGrass650" parent="map1" unique_id=1742323928 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, -10.5)
+
+[node name="tileGrass651" parent="map1" unique_id=1501084876 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, -10.5)
+
+[node name="tileGrass652" parent="map1" unique_id=447588888 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -10.5)
+
+[node name="tileGrass653" parent="map1" unique_id=364410650 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, -10.5)
+
+[node name="tileGrass654" parent="map1" unique_id=499102943 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, -10.5)
+
+[node name="tileGrass655" parent="map1" unique_id=1741240708 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -10.5)
+
+[node name="tileGrass656" parent="map1" unique_id=1754672646 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -9.5)
+
+[node name="tileGrass657" parent="map1" unique_id=472579207 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -9.5)
+
+[node name="tileGrass658" parent="map1" unique_id=581476926 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -9.5)
+
+[node name="tileGrass659" parent="map1" unique_id=256797334 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -9.5)
+
+[node name="tileGrass660" parent="map1" unique_id=184629305 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -9.5)
+
+[node name="tileGrass661" parent="map1" unique_id=2098761063 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -9.5)
+
+[node name="tileGrass662" parent="map1" unique_id=1193842796 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0, -9.5)
+
+[node name="tileGrass663" parent="map1" unique_id=20894107 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, -9.5)
+
+[node name="tileGrass664" parent="map1" unique_id=1209566016 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, -9.5)
+
+[node name="tileGrass665" parent="map1" unique_id=1551183388 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -9.5)
+
+[node name="tileGrass666" parent="map1" unique_id=250927081 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, -9.5)
+
+[node name="tileGrass667" parent="map1" unique_id=630135533 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, -9.5)
+
+[node name="tileGrass668" parent="map1" unique_id=856918019 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0, -9.5)
+
+[node name="tileGrass669" parent="map1" unique_id=1767652958 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, -9.5)
+
+[node name="tileGrass670" parent="map1" unique_id=947222054 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -9.5)
+
+[node name="tileGrass671" parent="map1" unique_id=996238431 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -9.5)
+
+[node name="tileGrass672" parent="map1" unique_id=200079724 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, -9.5)
+
+[node name="tileGrass673" parent="map1" unique_id=969691830 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 0, -9.5)
+
+[node name="tileGrass674" parent="map1" unique_id=1338010372 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, -9.5)
+
+[node name="tileGrass675" parent="map1" unique_id=902875532 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, -9.5)
+
+[node name="tileGrass676" parent="map1" unique_id=1175535602 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, -9.5)
+
+[node name="tileGrass677" parent="map1" unique_id=1151494369 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5, 0, -9.5)
+
+[node name="tileGrass678" parent="map1" unique_id=1352785180 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, 0, -9.5)
+
+[node name="tileGrass679" parent="map1" unique_id=1065272299 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, -9.5)
+
+[node name="tileGrass680" parent="map1" unique_id=543956847 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, 0, -9.5)
+
+[node name="tileGrass681" parent="map1" unique_id=1898300304 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, -9.5)
+
+[node name="tileGrass682" parent="map1" unique_id=424374638 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, -9.5)
+
+[node name="tileGrass683" parent="map1" unique_id=1455717675 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -9.5)
+
+[node name="tileGrass684" parent="map1" unique_id=140371235 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, -9.5)
+
+[node name="tileGrass685" parent="map1" unique_id=944556041 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, -9.5)
+
+[node name="tileGrass686" parent="map1" unique_id=64841672 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -9.5)
+
 [node name="tileGrass214" parent="map1" unique_id=749565085 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, -4.5)
 
@@ -893,6 +2210,108 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, -0.5)
 [node name="tileGrass219" parent="map1" unique_id=1199981199 instance=ExtResource("5_c0d3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0, 0.5)
 
+[node name="tiledesign2" parent="map1" unique_id=1929461000 instance=ExtResource("7_nuwfo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 6.5)
+
+[node name="tiledesign1" parent="map1" unique_id=1868672942 instance=ExtResource("8_pq4k2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -3.5)
+
+[node name="tiledesign3" parent="map1" unique_id=1089051807 instance=ExtResource("7_nuwfo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 0, -3.5)
+
+[node name="tiledesign4" parent="map1" unique_id=1670948454 instance=ExtResource("9_bg3m8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 0, 2.5)
+
+[node name="tiledesign5" parent="map1" unique_id=1646888773 instance=ExtResource("9_bg3m8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 0, 4.5)
+
+[node name="tiledesign6" parent="map1" unique_id=216067218 instance=ExtResource("9_bg3m8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 1.5)
+
+[node name="tiledesign7" parent="map1" unique_id=1013678667 instance=ExtResource("8_pq4k2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, 0, -7.5)
+
+[node name="tiledesign8" parent="map1" unique_id=1024177881 instance=ExtResource("7_nuwfo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, -2.5)
+
+[node name="tiledesign9" parent="map1" unique_id=191278185 instance=ExtResource("9_bg3m8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 3.5)
+
+[node name="tiledesign10" parent="map1" unique_id=2060888875 instance=ExtResource("7_nuwfo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, -1.5)
+
+[node name="tiledesign11" parent="map1" unique_id=1981197550 instance=ExtResource("8_pq4k2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, -5.5)
+
+[node name="tiledesign12" parent="map1" unique_id=331843053 instance=ExtResource("8_pq4k2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0, 3.5)
+
+[node name="tiledesign13" parent="map1" unique_id=614814487 instance=ExtResource("9_bg3m8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 5.5)
+
+[node name="tiledesign14" parent="map1" unique_id=1456111828 instance=ExtResource("7_nuwfo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -4.5)
+
+[node name="tiledesign15" parent="map1" unique_id=1720958949 instance=ExtResource("9_bg3m8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -6.5)
+
+[node name="tiledesign16" parent="map1" unique_id=2049132936 instance=ExtResource("8_pq4k2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, -7.5)
+
+[node name="tileGrass480" parent="map1" unique_id=532462666 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -1.5)
+
+[node name="tileGrass484" parent="map1" unique_id=1279434344 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -2.5)
+
+[node name="tileGrass485" parent="map1" unique_id=538170999 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, -1.5)
+
+[node name="tileGrass486" parent="map1" unique_id=2050209146 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, -2.5)
+
+[node name="tileGrass487" parent="map1" unique_id=506015162 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, -3.5)
+
+[node name="tileGrass488" parent="map1" unique_id=275434278 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, -3.5)
+
+[node name="tileGrass489" parent="map1" unique_id=566461543 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -3.5)
+
+[node name="tileGrass490" parent="map1" unique_id=1863649358 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -2.5)
+
+[node name="tileGrass491" parent="map1" unique_id=177975856 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, -1.5)
+
+[node name="tileGrass492" parent="map1" unique_id=2012581814 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -1.5)
+
+[node name="tileGrass493" parent="map1" unique_id=1527199131 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, -0.5)
+
+[node name="tileGrass494" parent="map1" unique_id=1766784382 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, -0.5)
+
+[node name="tileGrass495" parent="map1" unique_id=1559864281 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, -0.5)
+
+[node name="tileGrass496" parent="map1" unique_id=1143349857 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, -0.5)
+
+[node name="tileGrass497" parent="map1" unique_id=931187584 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5, 0, 0.5)
+
+[node name="tileGrass498" parent="map1" unique_id=367990907 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 0.5)
+
+[node name="tileGrass499" parent="map1" unique_id=896076105 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 0.5)
+
+[node name="tileGrass500" parent="map1" unique_id=1754895113 instance=ExtResource("5_c0d3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 0, 0.5)
+
 [node name="Path" type="Path3D" parent="." unique_id=1803089293]
 curve = SubResource("Curve3D_ekb56")
 
@@ -900,12 +2319,14 @@ curve = SubResource("Curve3D_ekb56")
 wait_time = 2.0
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2125735908]
-transform = Transform3D(0.99941945, -0.0062360074, 0.033493634, -0.014692305, 0.80810064, 0.588861, -0.030738376, -0.5890113, 0.80753994, 7, 7, 11)
+transform = Transform3D(0.99978024, 0.016058639, 0.013479665, -0.020725563, 0.65985, 0.7511114, 0.0031672567, -0.7512258, 0.6600378, 7, 7.796241, 11.20667)
 
 [node name="archer" parent="." unique_id=1374681455 instance=ExtResource("7_cxuya")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0, 5.5)
+visible = false
 
 [node name="archer2" parent="." unique_id=1312013433 instance=ExtResource("7_cxuya")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 5.5)
+visible = false
 
 [connection signal="timeout" from="spawnTimer" to="." method="_on_timer_timeout"]

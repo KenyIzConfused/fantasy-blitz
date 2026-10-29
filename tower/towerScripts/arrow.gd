@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 var target :  CharacterBody3D
-var speed : int = 30
+var speed : int = 15
 var arrow_damage : int
 
 func _physics_process(delta):

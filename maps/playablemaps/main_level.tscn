@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bkcd87noh404r" path="res://maps/TILES/tiledesign2.tscn" id="7_nuwfo"]
 [ext_resource type="PackedScene" uid="uid://bec7n4tb5agx0" path="res://maps/TILES/tiledesign1.tscn" id="8_pq4k2"]
 [ext_resource type="PackedScene" uid="uid://brqv1dkufjfku" path="res://maps/TILES/tiledesign3.tscn" id="9_bg3m8"]
+[ext_resource type="Script" uid="uid://dqe6p6qhdxftu" path="res://maps/camera_3d.gd" id="10_nuwfo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kqmmw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -5892,5 +5893,6 @@ wait_time = 2.5
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2125735908]
 transform = Transform3D(0.9996874, -0.019876346, 0.015170144, 0, 0.6067075, 0.79492515, -0.025004048, -0.79467666, 0.60651785, 7.257947, 7.7962418, 9.072091)
+script = ExtResource("10_nuwfo")
 
 [connection signal="timeout" from="spawnTimer" to="." method="_on_timer_timeout"]

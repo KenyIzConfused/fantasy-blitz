@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b87b4ukbgsens"]
+
+[ext_resource type="ArrayMesh" uid="uid://12khk28k58qm" path="res://assets/Models/OBJ format/selection-a.obj" id="1_e7gvh"]
+
+[node name="Marker" type="Node3D" unique_id=1250747422]
+
+[node name="marker" type="MeshInstance3D" parent="." unique_id=1141543497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
+mesh = ExtResource("1_e7gvh")

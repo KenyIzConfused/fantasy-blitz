@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bd560m6yx150h"]
+
+[ext_resource type="PackedScene" uid="uid://crkibvvwkd1mf" path="res://maps/playablemaps/test.tscn" id="1_test"]
+[ext_resource type="Script" uid="uid://cw85d5c1nn6t8" path="res://maps/playablemaps/prototype_level.gd" id="2_level"]
+[ext_resource type="PackedScene" uid="uid://d4mk7hu454n2a" path="res://UI/Gameplay_UI.tscn" id="4_hud"]
+[ext_resource type="PackedScene" uid="uid://dj4bte0u3yb2w" path="res://UI/Pause_Screen.tscn" id="5_pause"]
+[ext_resource type="PackedScene" uid="uid://dydp2oma3nijp" path="res://UI/Defeat_Screen.tscn" id="6_defeat"]
+
+[node name="MainLevel" type="Node3D" unique_id=402520655]
+script = ExtResource("2_level")
+
+[node name="TestLevel" parent="." unique_id=851736490 instance=ExtResource("1_test")]
+
+[node name="HUDLayer" type="CanvasLayer" parent="." unique_id=457558387]
+layer = 10
+
+[node name="GameplayUI" parent="HUDLayer" unique_id=663303093 instance=ExtResource("4_hud")]
+
+[node name="PauseScreen" parent="HUDLayer" unique_id=605894085 instance=ExtResource("5_pause")]
+visible = false
+
+[node name="DefeatScreen" parent="HUDLayer" unique_id=123456789 instance=ExtResource("6_defeat")]

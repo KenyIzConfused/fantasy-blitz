@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://wizardtscn01"]
+
+[ext_resource type="ArrayMesh" uid="uid://da2tb74ho04jk" path="res://assets/Models/OBJ format/weapon-cannon.obj" id="1_34fy7"]
+
+[sub_resource type="BoxShape3D" id="WizardBaseShape"]
+size = Vector3(1, 0.23754883, 1)
+
+[node name="wizard" type="StaticBody3D" unique_id=1374681455]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1702982833]
+mesh = ExtResource("1_34fy7")
+
+[node name="Aim" type="Marker3D" parent="MeshInstance3D" unique_id=326655632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0.6)
+
+[node name="mobDetector" type="Area3D" parent="." unique_id=373244034]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mobDetector" unique_id=1033445613]
+shape = SubResource("WizardBaseShape")

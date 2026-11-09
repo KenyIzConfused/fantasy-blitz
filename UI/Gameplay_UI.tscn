@@ -1,0 +1,410 @@
+[gd_scene format=3 uid="uid://d4mk7hu454n2a"]
+
+[ext_resource type="Script" uid="uid://c08dhrop55dgo" path="res://UI/Gameplay_UI.gd" id="1_gui"]
+[ext_resource type="Texture2D" uid="uid://b1e543mlwgos" path="res://assets/generated/icon_heart.png" id="2_heart"]
+[ext_resource type="Texture2D" uid="uid://bfjh1miiq85ew" path="res://assets/generated/icon_skull.png" id="3_skull"]
+[ext_resource type="Texture2D" uid="uid://d3r8c75kwmnpp" path="res://assets/generated/icon_coin.png" id="4_coin"]
+[ext_resource type="Texture2D" uid="uid://6qa3rb44en6k" path="res://assets/generated/icon_pause.png" id="5_pause"]
+[ext_resource type="Texture2D" uid="uid://hvqy4ib867rf" path="res://assets/generated/icon_sword.png" id="6_sword"]
+[ext_resource type="Texture2D" uid="uid://cr5esbtnsdtuf" path="res://assets/generated/icon_range.png" id="7_range"]
+[ext_resource type="Texture2D" uid="uid://8mr3noe1av2h" path="res://assets/generated/ui_panel_h.png" id="8_panel_h"]
+[ext_resource type="Texture2D" uid="uid://4agitxrw17pg" path="res://assets/generated/ui_panel_v.png" id="9_panel_v"]
+[ext_resource type="Texture2D" uid="uid://bg1s5pnic2a1i" path="res://assets/card/1.png" id="10_card1"]
+[ext_resource type="Texture2D" uid="uid://c74ijpb26bt4y" path="res://assets/card/2.png" id="11_card2"]
+[ext_resource type="Texture2D" uid="uid://h4e8oepk83ar" path="res://assets/card/3.png" id="12_card3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pill"]
+content_margin_left = 14.0
+content_margin_top = 6.0
+content_margin_right = 14.0
+content_margin_bottom = 6.0
+bg_color = Color(0.08, 0.06, 0.04, 0.75)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rack"]
+content_margin_left = 30.0
+content_margin_top = 20.0
+content_margin_right = 30.0
+content_margin_bottom = 20.0
+texture = ExtResource("8_panel_h")
+texture_margin_left = 56.0
+texture_margin_top = 56.0
+texture_margin_right = 56.0
+texture_margin_bottom = 56.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_window"]
+content_margin_left = 50.0
+content_margin_top = 150.0
+content_margin_right = 50.0
+content_margin_bottom = 55.0
+texture = ExtResource("9_panel_v")
+texture_margin_left = 70.0
+texture_margin_top = 140.0
+texture_margin_right = 70.0
+texture_margin_bottom = 100.0
+
+[node name="GameplayUI" type="Control" unique_id=1987190688]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_gui")
+
+[node name="TopBar" type="HBoxContainer" parent="." unique_id=620749629]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 14.0
+offset_top = 10.0
+offset_right = -14.0
+offset_bottom = 60.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/separation = 10
+
+[node name="LivesBox" type="PanelContainer" parent="TopBar" unique_id=1945690104]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pill")
+
+[node name="LivesRow" type="HBoxContainer" parent="TopBar/LivesBox" unique_id=982152350]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="Heart1" type="TextureRect" parent="TopBar/LivesBox/LivesRow" unique_id=604150973]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(34, 34)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_heart")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart2" type="TextureRect" parent="TopBar/LivesBox/LivesRow" unique_id=1927703725]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(34, 34)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_heart")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Heart3" type="TextureRect" parent="TopBar/LivesBox/LivesRow" unique_id=603648986]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(34, 34)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_heart")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="WaveBox" type="PanelContainer" parent="TopBar" unique_id=970340393]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pill")
+
+[node name="WaveRow" type="HBoxContainer" parent="TopBar/WaveBox" unique_id=779096770]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="SkullIcon" type="TextureRect" parent="TopBar/WaveBox/WaveRow" unique_id=1028004617]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_skull")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="WaveLabel" type="Label" parent="TopBar/WaveBox/WaveRow" unique_id=17487685]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.95, 0.85, 1)
+text = "Wave 1 / 10"
+
+[node name="Spacer" type="Control" parent="TopBar" unique_id=891999072]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="GoldBox" type="PanelContainer" parent="TopBar" unique_id=1805669255]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pill")
+
+[node name="GoldRow" type="HBoxContainer" parent="TopBar/GoldBox" unique_id=1904692480]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="GoldIcon" type="TextureRect" parent="TopBar/GoldBox/GoldRow" unique_id=261859913]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_coin")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GoldAmount" type="Label" parent="TopBar/GoldBox/GoldRow" unique_id=1570323604]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
+text = "150"
+
+[node name="PauseButton" type="TextureButton" parent="TopBar" unique_id=1418932339]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("5_pause")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BuildRack" type="PanelContainer" parent="." unique_id=1821639733]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = -128.0
+offset_right = 466.0
+offset_bottom = -18.0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rack")
+
+[node name="BuildBar" type="HBoxContainer" parent="BuildRack" unique_id=1136567964]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 14
+alignment = 1
+
+[node name="Card1" type="VBoxContainer" parent="BuildRack/BuildBar" unique_id=956654110]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="BuildCard1" type="TextureButton" parent="BuildRack/BuildBar/Card1" unique_id=1163540522]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(86, 86)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("10_card1")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Cost1" type="HBoxContainer" parent="BuildRack/BuildBar/Card1" unique_id=2099874128]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Coin1" type="TextureRect" parent="BuildRack/BuildBar/Card1/Cost1" unique_id=1644034081]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_coin")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label1" type="Label" parent="BuildRack/BuildBar/Card1/Cost1" unique_id=1248952219]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
+text = "100"
+
+[node name="Card2" type="VBoxContainer" parent="BuildRack/BuildBar" unique_id=648044624]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="BuildCard2" type="TextureButton" parent="BuildRack/BuildBar/Card2" unique_id=817295032]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(86, 86)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("11_card2")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Cost2" type="HBoxContainer" parent="BuildRack/BuildBar/Card2" unique_id=194110177]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Coin2" type="TextureRect" parent="BuildRack/BuildBar/Card2/Cost2" unique_id=1681343101]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_coin")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="BuildRack/BuildBar/Card2/Cost2" unique_id=756629052]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
+text = "150"
+
+[node name="Card3" type="VBoxContainer" parent="BuildRack/BuildBar" unique_id=1026801198]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="BuildCard3" type="TextureButton" parent="BuildRack/BuildBar/Card3" unique_id=970899636]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(86, 86)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("12_card3")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Cost3" type="HBoxContainer" parent="BuildRack/BuildBar/Card3" unique_id=1237520473]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Coin3" type="TextureRect" parent="BuildRack/BuildBar/Card3/Cost3" unique_id=1106030246]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_coin")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label3" type="Label" parent="BuildRack/BuildBar/Card3/Cost3" unique_id=1700011865]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
+text = "200"
+
+[node name="Card4" type="VBoxContainer" parent="BuildRack/BuildBar" unique_id=567890123]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="BuildCard4" type="TextureButton" parent="BuildRack/BuildBar/Card4" unique_id=1163540522]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(86, 86)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = null
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Cost4" type="HBoxContainer" parent="BuildRack/BuildBar/Card4" unique_id=2099874128]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Coin4" type="TextureRect" parent="BuildRack/BuildBar/Card4/Cost4" unique_id=1644034081]
+custom_minimum_size = Vector2(18, 18)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_coin")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label4" type="Label" parent="BuildRack/BuildBar/Card4/Cost4" unique_id=1248952219]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
+text = "250"
+
+[node name="InspectPanel" type="PanelContainer" parent="." unique_id=2120232437]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -466.0
+offset_top = -318.0
+offset_right = -14.0
+offset_bottom = -18.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_window")
+
+[node name="InspectColumn" type="VBoxContainer" parent="InspectPanel" unique_id=1974268863]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="InspectTitle" type="Label" parent="InspectPanel/InspectColumn" unique_id=937701174]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.95, 0.85, 1)
+text = "Archer Tower"
+horizontal_alignment = 1
+
+[node name="DamageRow" type="HBoxContainer" parent="InspectPanel/InspectColumn" unique_id=1129075177]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="SwordIcon" type="TextureRect" parent="InspectPanel/InspectColumn/DamageRow" unique_id=1003140127]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("6_sword")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DamageLabel" type="Label" parent="InspectPanel/InspectColumn/DamageRow" unique_id=2034986338]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.95, 0.85, 1)
+text = "Damage: 25"
+
+[node name="RangeRow" type="HBoxContainer" parent="InspectPanel/InspectColumn" unique_id=854918015]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="RangeIcon" type="TextureRect" parent="InspectPanel/InspectColumn/RangeRow" unique_id=746182213]
+custom_minimum_size = Vector2(26, 26)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("7_range")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RangeLabel" type="Label" parent="InspectPanel/InspectColumn/RangeRow" unique_id=1098878485]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.95, 0.85, 1)
+text = "Range: 6"
+
+[node name="UpgradeButton" type="Button" parent="InspectPanel/InspectColumn" unique_id=747921174]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Upgrade (100)"
+
+[node name="SellButton" type="Button" parent="InspectPanel/InspectColumn" unique_id=42684347]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Sell (50)"

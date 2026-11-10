@@ -14,6 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://h4e8oepk83ar" path="res://assets/card/3.png" id="11_ticpt"]
 [ext_resource type="Texture2D" uid="uid://bg1s5pnic2a1i" path="res://assets/card/1.png" id="12_fwamf"]
 [ext_resource type="Texture2D" uid="uid://c74ijpb26bt4y" path="res://assets/card/2.png" id="13_567ie"]
+[ext_resource type="ArrayMesh" uid="uid://txjvo4ci8yrf" path="res://assets/Models/OBJ format/tower-square-top-a.obj" id="15_3cv75"]
+[ext_resource type="ArrayMesh" uid="uid://cthvlgxqnvo3p" path="res://assets/Models/OBJ format/tower-square-top-b.obj" id="16_0c12c"]
+[ext_resource type="ArrayMesh" uid="uid://cuh6k5dqea1ki" path="res://assets/Models/OBJ format/tower-square-roof-a.obj" id="17_0e3wx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kqmmw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -43,7 +46,7 @@ script = ExtResource("1_wq3xc")
 environment = SubResource("Environment_dtx3v")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=172397970]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8223258, 0.05835688, 0.56601655, 0.46359134, -0.50808215, 0.7259032, 0.32994437, 0.85932934, 0.39075541, 0, 0, 0)
 shadow_enabled = true
 
 [node name="map1" type="Node3D" parent="." unique_id=1945793919]
@@ -5947,5 +5950,25 @@ texture_normal = ExtResource("12_fwamf")
 layout_mode = 2
 theme = SubResource("Theme_ovwjj")
 texture_normal = ExtResource("13_567ie")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1229819067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.503876, 0.3776145, -0.50044006)
+mesh = ExtResource("15_3cv75")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1753130272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.503876, 0.09474093, -1.5004401)
+mesh = ExtResource("16_0c12c")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=391223671]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.503876, 0.09474093, -2.5004401)
+mesh = ExtResource("17_0e3wx")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1575368718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.503876, 0.09474093, 0.49955994)
+mesh = ExtResource("16_0c12c")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1642031504]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.503876, 0.09474093, 1.4995599)
+mesh = ExtResource("17_0e3wx")
 
 [connection signal="timeout" from="spawnTimer" to="." method="_on_timer_timeout"]

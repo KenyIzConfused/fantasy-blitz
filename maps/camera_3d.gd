@@ -1,71 +1,52 @@
 extends Camera3D
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+## Hover marker: follows the mouse across the tile grid every frame and blinks,
+## so the player always sees where a tower would land - no click needed.
+## Tower placement itself is handled by the HUD (UI/Gameplay_UI.gd).
+
+const MARKER: PackedScene = preload("res://resourceScenes/marker.tscn")
+const TILE_SIZE := 2.0
+const BLINK_SPEED := 2.5
+
+var _marker: Node3D = null
+var _marker_mesh: GeometryInstance3D = null
+var _blink_time: float = 0.0
+
+
+func _ready() -> void:
+	_marker = MARKER.instantiate()
+	_marker_mesh = _marker.get_node_or_null("marker") as GeometryInstance3D
+	_marker.visible = false
+	get_parent().add_child.call_deferred(_marker)
+
+
 func _process(delta: float) -> void:
-	pass
+	var hit := _raycast_from_mouse()
+	if hit.is_empty():
+		_marker.visible = false
+		return
 
-@onready var card_ui_node: HBoxContainer = $"../hud/CardContainer/Cards"
-const ARCHER = preload("res://tower/archer.tscn")
+	_marker.visible = true
+	var point: Vector3 = hit["position"]
+	_marker.position = Vector3(
+		roundf(point.x / TILE_SIZE) * TILE_SIZE,
+		point.y,
+		roundf(point.z / TILE_SIZE) * TILE_SIZE
+	)
+
+	# Blink: pulse the scale and fade between solid and semi-transparent.
+	_blink_time += delta
+	var pulse: float = (sin(_blink_time * TAU * BLINK_SPEED) + 1.0) * 0.5
+	_marker.scale = Vector3.ONE * (1.0 + 0.12 * pulse)
+	if _marker_mesh != null:
+		_marker_mesh.transparency = 0.55 * (1.0 - pulse)
 
 
-var marker = preload("res://resourceScenes/marker.tscn")
-var active_marker = null
-
-func _input(event):
-	if event.is_action_pressed("click"):
-		shoot_ray()
-
-func shoot_ray():
-	var mouse_pos = get_viewport().get_mouse_position()
-	var ray_length = 1000
-	var from = project_ray_origin(mouse_pos)
-	var to = from + project_ray_normal(mouse_pos) * ray_length
-	var space = get_world_3d().direct_space_state
-	var ray_query = PhysicsRayQueryParameters3D.new()
-	ray_query.from = from
-	ray_query.to = to
-	var raycast_result = space.intersect_ray(ray_query)
-	print(raycast_result)
-	
-	if !raycast_result.is_empty():
-		var hit_position = raycast_result["position"]
-		
-		# --- 1. SNAP TO TILE GRID ---
-		# Change '2.0' to whatever size your tile width/length is (e.g., 1.0, 2.0, etc.)
-		var tile_size = 2.0 
-		var snapped_position = Vector3(
-			round(hit_position.x / tile_size) * tile_size,
-			hit_position.y, # Keep original height, or hardcode it like 0.0 if flat
-			round(hit_position.z / tile_size) * tile_size
-		)
-		
-		# --- 2. ONLY ALLOW 1 MARKER TO EXIST ---
-		if card_ui_node and card_ui_node.selected_tower_scene != null:
-			# Player has a card selected! Let's place the permanent tower here.
-			try_spawn_tower(snapped_position)
-		else:
-			# No card selected, just move the regular selection/preview marker
-			if is_instance_valid(active_marker):
-				active_marker.position = snapped_position
-			else:
-				active_marker = marker.instantiate()
-				active_marker.position = snapped_position
-				get_parent().add_child(active_marker)
-
-func try_spawn_tower(snapped_position: Vector3) -> void:
-	# 1. Instantiate the chosen tower scene (like archer.tscn)
-	var new_tower = card_ui_node.selected_tower_scene.instantiate()
-	
-	# 2. Position it on the snapped tile coordinate
-	new_tower.position = snapped_position
-	
-	# 3. Add it to the 3D world scene permanently
-	get_parent().add_child(new_tower)
-	
-	# 4. Clean up the preview/selection marker if it was visible
-	if is_instance_valid(active_marker):
-		active_marker.queue_free()
-		active_marker = null
-		
-	# 5. Reset card selection so you don't accidentally place another one on the next click
-	card_ui_node.selected_tower_scene = null
+func _raycast_from_mouse() -> Dictionary:
+	var mouse_pos := get_viewport().get_mouse_position()
+	var from := project_ray_origin(mouse_pos)
+	var to := from + project_ray_normal(mouse_pos) * 1000.0
+	var query := PhysicsRayQueryParameters3D.new()
+	query.from = from
+	query.to = to
+	return get_world_3d().direct_space_state.intersect_ray(query)

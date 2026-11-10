@@ -2,6 +2,7 @@ extends Control
 
 ## Title screen controller. Wires up the three menu buttons and owns what
 ## each one does. The button visuals are baked textures on TitleButton nodes.
+const map = preload("res://maps/playablemaps/test_prototype_gameplay_ui.tscn")
 
 @onready var _start_button: TextureButton = %StartButton
 @onready var _settings_button: TextureButton = %SettingsButton
@@ -22,8 +23,7 @@ func _ready() -> void:
 
 
 func _on_start_pressed() -> void:
-	# TODO: swap this for the first gameplay scene, e.g.
-	# get_tree().change_scene_to_file("res://scenes/Level_01.tscn")
+	get_tree().change_scene_to_packed(map)
 	print("Title screen: Start Game pressed")
 
 

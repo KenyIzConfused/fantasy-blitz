@@ -6,7 +6,7 @@ var current_targets : Array = []
 var curr : CharacterBody3D
 var can_shoot : bool = true
 
-func _process(delta):
+func _process(_delta):
 	if is_instance_valid(curr):
 		look_at(curr.global_position)
 		if can_shoot: 

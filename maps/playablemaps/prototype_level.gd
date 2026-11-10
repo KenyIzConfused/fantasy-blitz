@@ -27,18 +27,34 @@ var current_tower_scene: PackedScene = null
 
 ## Run state shown in the HUD and on the defeat screen.
 const STARTING_LIVES := 3
+const STARTING_GOLD := 150
+
+## Economy: gold per enemy killed, and passive income every PASSIVE_INTERVAL secs.
+const KILL_REWARD := 10
+const PASSIVE_GOLD := 2
+const PASSIVE_INTERVAL := 5.0
+
 var lives: int = STARTING_LIVES
 var kills: int = 0
 var wave: int = 1
+
+var _passive_timer: Timer
 
 
 func _ready() -> void:
 	add_to_group("level_bridge")
 	hud.build_card_selected.connect(_on_card_selected)
 	hud.pause_pressed.connect(_on_pause_pressed)
-	hud.set_gold(150)
-	hud.set_wave(wave, 10)
+	hud.set_gold(STARTING_GOLD)
+	hud.set_wave(wave)
 	hud.set_lives(lives)
+
+	# Passive income: +2 gold every 5 seconds.
+	_passive_timer = Timer.new()
+	_passive_timer.wait_time = PASSIVE_INTERVAL
+	_passive_timer.autostart = true
+	_passive_timer.timeout.connect(_on_passive_gold)
+	add_child(_passive_timer)
 
 
 ## --- called by the enemies (enemy.gd) via the "level_bridge" group ---------
@@ -54,6 +70,17 @@ func enemy_reached_end() -> void:
 
 func enemy_killed() -> void:
 	kills += 1
+	hud.add_gold(KILL_REWARD)
+
+
+func _on_passive_gold() -> void:
+	hud.add_gold(PASSIVE_GOLD)
+
+
+## Called by the spawner (main_level.gd) whenever a new wave begins.
+func on_wave_started(wave_number: int, _enemy_count: int) -> void:
+	wave = wave_number
+	hud.set_wave(wave_number)
 
 
 func _game_over() -> void:

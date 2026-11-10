@@ -36,15 +36,15 @@ texture_margin_right = 56.0
 texture_margin_bottom = 56.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_window"]
-content_margin_left = 50.0
-content_margin_top = 150.0
-content_margin_right = 50.0
-content_margin_bottom = 55.0
+content_margin_left = 45.0
+content_margin_top = 80.0
+content_margin_right = 45.0
+content_margin_bottom = 34.0
 texture = ExtResource("9_panel_v")
-texture_margin_left = 70.0
-texture_margin_top = 140.0
-texture_margin_right = 70.0
-texture_margin_bottom = 100.0
+texture_margin_left = 55.0
+texture_margin_top = 80.0
+texture_margin_right = 55.0
+texture_margin_bottom = 55.0
 
 [node name="GameplayUI" type="Control" unique_id=1987190688]
 layout_mode = 3
@@ -172,10 +172,9 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 14.0
-offset_top = -128.0
-offset_right = 466.0
-offset_bottom = -18.0
+offset_top = -202.0
+offset_right = 556.0
+offset_bottom = 4.0
 grow_vertical = 0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_rack")
@@ -291,41 +290,6 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
 text = "200"
 
-[node name="Card4" type="VBoxContainer" parent="BuildRack/BuildBar" unique_id=567890123]
-layout_mode = 2
-mouse_filter = 2
-theme_override_constants/separation = 2
-alignment = 1
-
-[node name="BuildCard4" type="TextureButton" parent="BuildRack/BuildBar/Card4" unique_id=1163540522]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(86, 86)
-layout_mode = 2
-size_flags_horizontal = 4
-texture_normal = null
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="Cost4" type="HBoxContainer" parent="BuildRack/BuildBar/Card4" unique_id=2099874128]
-unique_name_in_owner = true
-layout_mode = 2
-mouse_filter = 2
-alignment = 1
-
-[node name="Coin4" type="TextureRect" parent="BuildRack/BuildBar/Card4/Cost4" unique_id=1644034081]
-custom_minimum_size = Vector2(18, 18)
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("4_coin")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Label4" type="Label" parent="BuildRack/BuildBar/Card4/Cost4" unique_id=1248952219]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
-text = "250"
-
 [node name="InspectPanel" type="PanelContainer" parent="." unique_id=2120232437]
 unique_name_in_owner = true
 layout_mode = 1
@@ -334,26 +298,39 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -466.0
-offset_top = -318.0
+offset_left = -320.0
+offset_top = -300.0
 offset_right = -14.0
 offset_bottom = -18.0
 grow_horizontal = 0
 grow_vertical = 0
-mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_window")
 
 [node name="InspectColumn" type="VBoxContainer" parent="InspectPanel" unique_id=1974268863]
 layout_mode = 2
 mouse_filter = 2
-theme_override_constants/separation = 8
+theme_override_constants/separation = 6
 
-[node name="InspectTitle" type="Label" parent="InspectPanel/InspectColumn" unique_id=937701174]
+[node name="HeaderRow" type="HBoxContainer" parent="InspectPanel/InspectColumn" unique_id=770100001]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="InspectTitle" type="Label" parent="InspectPanel/InspectColumn/HeaderRow" unique_id=937701174]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 0.95, 0.85, 1)
+theme_override_font_sizes/font_size = 25
 text = "Archer Tower"
 horizontal_alignment = 1
+
+[node name="InspectCloseButton" type="Button" parent="InspectPanel/InspectColumn/HeaderRow" unique_id=770100002]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_vertical = 4
+text = "X"
 
 [node name="DamageRow" type="HBoxContainer" parent="InspectPanel/InspectColumn" unique_id=1129075177]
 layout_mode = 2
@@ -397,14 +374,14 @@ text = "Range: 6"
 
 [node name="UpgradeButton" type="Button" parent="InspectPanel/InspectColumn" unique_id=747921174]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(150, 40)
+custom_minimum_size = Vector2(150, 34)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Upgrade (100)"
 
 [node name="SellButton" type="Button" parent="InspectPanel/InspectColumn" unique_id=42684347]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(150, 40)
+custom_minimum_size = Vector2(150, 34)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Sell (50)"

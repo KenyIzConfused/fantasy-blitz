@@ -4,7 +4,7 @@ var target :  CharacterBody3D
 var speed : int = 15
 var arrow_damage : int
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if is_instance_valid(target):
 		velocity = global_position.direction_to(target.global_position) * speed
 		look_at(target.global_position)

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d4mk7hu454n2a" path="res://UI/Gameplay_UI.tscn" id="4_hud"]
 [ext_resource type="PackedScene" uid="uid://dj4bte0u3yb2w" path="res://UI/Pause_Screen.tscn" id="5_pause"]
 [ext_resource type="PackedScene" uid="uid://dydp2oma3nijp" path="res://UI/Defeat_Screen.tscn" id="6_defeat"]
+[ext_resource type="PackedScene" path="res://UI/Victory_Screen.tscn" id="7_victory"]
 
 [node name="MainLevel" type="Node3D" unique_id=402520655]
 script = ExtResource("2_level")
@@ -20,3 +21,5 @@ layer = 10
 visible = false
 
 [node name="DefeatScreen" parent="HUDLayer" unique_id=123456789 instance=ExtResource("6_defeat")]
+
+[node name="VictoryScreen" parent="HUDLayer" unique_id=987654321 instance=ExtResource("7_victory")]

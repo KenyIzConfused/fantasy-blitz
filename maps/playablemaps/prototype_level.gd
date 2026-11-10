@@ -19,6 +19,7 @@ const CARD_STATS := {
 @onready var hud: GameplayUI = $HUDLayer/GameplayUI
 @onready var pause_screen: Control = $HUDLayer/PauseScreen
 @onready var defeat_screen: Control = $HUDLayer/DefeatScreen
+@onready var victory_screen: Control = $HUDLayer/VictoryScreen
 
 ## Run state shown in the HUD and on the result screen.
 const STARTING_LIVES := 3
@@ -83,10 +84,13 @@ func on_wave_started(wave_number: int, _enemy_count: int) -> void:
 
 ## Called by the spawner after the final wave is cleared: the player won.
 func on_level_cleared() -> void:
-	if defeat_screen.visible:
+	if defeat_screen.visible or victory_screen.visible:
 		return
+	# COC-style stars: a flawless defense (no enemy leaked) is 3 stars, each
+	# leak costs one, and winning is always worth at least 1.
+	var stars: int = clampi(lives, 1, 3)
 	get_tree().paused = true
-	defeat_screen.show_victory(wave, kills)
+	victory_screen.show_victory(wave, kills, stars)
 
 
 func _game_over() -> void:

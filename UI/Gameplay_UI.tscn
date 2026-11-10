@@ -291,43 +291,9 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
 text = "200"
 
-[node name="Card4" type="VBoxContainer" parent="BuildRack/BuildBar" unique_id=567890123]
-layout_mode = 2
-mouse_filter = 2
-theme_override_constants/separation = 2
-alignment = 1
-
-[node name="BuildCard4" type="TextureButton" parent="BuildRack/BuildBar/Card4" unique_id=1163540522]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(86, 86)
-layout_mode = 2
-size_flags_horizontal = 4
-texture_normal = null
-ignore_texture_size = true
-stretch_mode = 5
-
-[node name="Cost4" type="HBoxContainer" parent="BuildRack/BuildBar/Card4" unique_id=2099874128]
-unique_name_in_owner = true
-layout_mode = 2
-mouse_filter = 2
-alignment = 1
-
-[node name="Coin4" type="TextureRect" parent="BuildRack/BuildBar/Card4/Cost4" unique_id=1644034081]
-custom_minimum_size = Vector2(18, 18)
-layout_mode = 2
-mouse_filter = 2
-texture = ExtResource("4_coin")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Label4" type="Label" parent="BuildRack/BuildBar/Card4/Cost4" unique_id=1248952219]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
-text = "250"
-
 [node name="InspectPanel" type="PanelContainer" parent="." unique_id=2120232437]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0

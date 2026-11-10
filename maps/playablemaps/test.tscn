@@ -5913,6 +5913,7 @@ script = ExtResource("10_0e3wx")
 [node name="hud" type="CanvasLayer" parent="." unique_id=714847248]
 
 [node name="CardContainer" type="Control" parent="hud" unique_id=730077191]
+visible = false
 layout_mode = 3
 anchors_preset = 12
 anchor_top = 1.0
@@ -5923,6 +5924,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Cards" type="HBoxContainer" parent="hud/CardContainer" unique_id=1116178781]
+visible = false
 layout_mode = 1
 offset_right = 2328.0
 offset_bottom = 3000.0

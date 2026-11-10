@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://yclpdlsncqe7"]
+
+[ext_resource type="Script" uid="uid://cfywb6r8ky5vr" path="res://tower/towerScripts/arrow.gd" id="1_i4eus"]
+
+[sub_resource type="PlaceholderMesh" id="PlaceholderMesh_r71og"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ql73s"]
+size = Vector3(0.9678345, 0.83517456, 0.9942627)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v0s4m"]
+size = Vector3(1.2005463, 1.1010132, 1.1023254)
+
+[node name="slash" type="CharacterBody3D" unique_id=1369384515]
+script = ExtResource("1_i4eus")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2109649213]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.07528336, -1.4355469)
+mesh = SubResource("PlaceholderMesh_r71og")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1225404604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0140686035, 0.3966182, 0.0016479492)
+shape = SubResource("BoxShape3D_ql73s")
+
+[node name="collision" type="Area3D" parent="." unique_id=311567851]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="collision" unique_id=72794817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011619568, 0.38180542, 0.0023956299)
+shape = SubResource("BoxShape3D_v0s4m")
+
+[connection signal="body_entered" from="collision" to="." method="_on_collision_body_entered"]

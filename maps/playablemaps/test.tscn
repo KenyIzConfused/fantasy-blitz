@@ -5924,6 +5924,7 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Cards" type="HBoxContainer" parent="hud/CardContainer" unique_id=1116178781]
+visible = false
 layout_mode = 1
 offset_right = 2328.0
 offset_bottom = 3000.0

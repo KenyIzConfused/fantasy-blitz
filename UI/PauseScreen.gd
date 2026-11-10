@@ -20,7 +20,7 @@ func _ready() -> void:
 	Input.set_custom_mouse_cursor(
 		preload("res://assets/generated/cursor_crystal.png"),
 		Input.CURSOR_ARROW,
-		Vector2(4, 4)
+		Vector2(2, 2)
 	)
 
 

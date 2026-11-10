@@ -2,10 +2,11 @@ extends Camera3D
 
 ## Hover marker: follows the mouse across the tile grid every frame and blinks,
 ## so the player always sees where a tower would land - no click needed.
-## Tower placement itself is handled by the HUD (UI/Gameplay_UI.gd).
+## The marker only appears over a buildable grass tile (never the enemy path);
+## Tower placement itself is handled by the HUD (UI/Gameplay_UI.gd), which
+## applies the same TileGrid rule.
 
 const MARKER: PackedScene = preload("res://resourceScenes/marker.tscn")
-const TILE_SIZE := 2.0
 const BLINK_SPEED := 2.5
 
 var _marker: Node3D = null
@@ -22,17 +23,14 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	var hit := _raycast_from_mouse()
-	if hit.is_empty():
+	# Only show the pointer over a buildable grass tile - hide it over the
+	# enemy path (spawner, straights, corners, end) or empty space.
+	if hit.is_empty() or not TileGrid.is_buildable_tile(hit.get("collider")):
 		_marker.visible = false
 		return
 
 	_marker.visible = true
-	var point: Vector3 = hit["position"]
-	_marker.position = Vector3(
-		roundf(point.x / TILE_SIZE) * TILE_SIZE,
-		point.y,
-		roundf(point.z / TILE_SIZE) * TILE_SIZE
-	)
+	_marker.position = TileGrid.snap_to_tile(hit["position"])
 
 	# Blink: pulse the scale and fade between solid and semi-transparent.
 	_blink_time += delta

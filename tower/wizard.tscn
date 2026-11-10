@@ -1,23 +1,51 @@
-[gd_scene format=3 uid="uid://wizardtscn01"]
-
-[ext_resource type="ArrayMesh" uid="uid://da2tb74ho04jk" path="res://assets/Models/OBJ format/weapon-cannon.obj" id="1_34fy7"]
-
-[sub_resource type="BoxShape3D" id="WizardBaseShape"]
-size = Vector3(1, 0.23754883, 1)
-
-[node name="wizard" type="StaticBody3D" unique_id=1374681455]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1702982833]
-mesh = ExtResource("1_34fy7")
-
-[node name="Aim" type="Marker3D" parent="MeshInstance3D" unique_id=326655632]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0.6)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1067743546]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06311035, 0)
-shape = SubResource("WizardBaseShape")
-
-[node name="mobDetector" type="Area3D" parent="." unique_id=373244034]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="mobDetector" unique_id=1033445613]
-shape = SubResource("WizardBaseShape")
+[gd_scene format=3]
+	
+	[ext_resource type="ArrayMesh" path="res://assets/Models/OBJ format/tower-round-base.obj" id="1_base"]
+	[ext_resource type="PackedScene" path="res://assets/Models/GLTF FORMAT/WIZARD.glb" id="2_wizard_glb"]
+	[ext_resource type="Script" path="res://tower/towerScripts/wizard.gd" id="3_wizard_script"]
+	
+	[sub_resource type="BoxShape3D" id="WizardBaseShape"]
+	size = Vector3(1, 0.24, 1)
+	
+	[sub_resource type="SphereShape3D" id="WizardRangeShape"]
+	radius = 5.0
+	debug_color = Color(0.5, 0, 0.8, 1)
+	
+	[node name="wizard" type="StaticBody3D"]
+	transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
+	script = ExtResource("3_wizard_script")
+	
+	[node name="Base" type="MeshInstance3D" parent="."]
+	transform = Transform3D(1.6, 0, 0, 0, 1, 0, 0, 0, 1.6, 0, 0, 0)
+	mesh = ExtResource("1_base")
+	
+	[node name="Model" type="Node3D" parent="."]
+	transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.336, 0)
+	
+	[node name="MeshInstance3D" type="MeshInstance3D" parent="Model"]
+	transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, 0)
+	
+	[node name="WIZARDGlb" parent="Model/MeshInstance3D" instance=ExtResource("2_wizard_glb")]
+	
+	[node name="Aim" type="Marker3D" parent="Model/MeshInstance3D"]
+	transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.0, 0)
+	
+	[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+	transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+	shape = SubResource("WizardBaseShape")
+	
+	[node name="mobDetector" type="Area3D" parent="."]
+	
+	[node name="CollisionShape3D" type="CollisionShape3D" parent="mobDetector"]
+	shape = SubResource("WizardRangeShape")
+	debug_color = Color(0.5, 0, 0.8, 1)
+	
+	[node name="shootCooldown" type="Timer" parent="."]
+	wait_time = 1.2
+	
+	[node name="arrowContainer" type="Node" parent="."]
+	
+	[connection signal="body_entered" from="mobDetector" to="." method="_on_mob_detector_body_entered"]
+	[connection signal="body_exited" from="mobDetector" to="." method="_on_mob_detector_body_exited"]
+	[connection signal="timeout" from="shootCooldown" to="." method="_on_shoot_cooldown_timeout"]
+	

@@ -1,11 +1,14 @@
 extends CharacterBody3D
 
-@export var speed : int = 3
-@export var health : int = 15
+## A mob that walks a Path3D by advancing its parent PathFollow3D each physics
+## frame. Health and speed are set per-wave by the spawner (main_level.gd).
+
+@export var speed: float = 2.0
+@export var health: int = 15
 
 @onready var Path : PathFollow3D = get_parent()
 
-func _physics_process(delta):
+func _physics_process(delta: float) -> void:
 	Path.set_progress(Path.get_progress() + speed * delta)
 	
 	if Path.get_progress_ratio() >= 0.99:
@@ -14,7 +17,7 @@ func _physics_process(delta):
 		get_tree().call_group("level_bridge", "enemy_reached_end")
 		Path.queue_free()
 
-func take_damage(damage : int) -> void:
+func take_damage(damage: int) -> void:
 	health -= damage
 	
 	if health <= 0:

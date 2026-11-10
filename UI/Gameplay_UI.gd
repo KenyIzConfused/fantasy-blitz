@@ -24,13 +24,17 @@ signal sell_pressed
 var build_cards: Array[Dictionary] = [
 	{"name": "Archer", "cost": 100, "damage": 25, "range": 6, "texture": preload("res://assets/card/1.png"), "scene": preload("res://tower/archer.tscn")},
 	{"name": "Wizard", "cost": 150, "damage": 40, "range": 5, "texture": preload("res://assets/card/2.png"), "scene": preload("res://tower/wizard.tscn")},
-	{"name": "Knight", "cost": 200, "damage": 15, "range": 3, "texture": preload("res://assets/card/3.png"), "scene": preload("res://tower/knight.tscn")},
+	{"name": "Knight", "cost": 200, "damage": 60, "range": 3, "texture": preload("res://assets/card/3.png"), "scene": preload("res://tower/knight.tscn")},
 ]
 
-## Tower placement (mirrors camera_3d.gd): click a card, then click a tile.
-const TILE_SIZE := 2.0
+## Tower placement: click a card, then click a grass tile.
+## The grid and buildability rules live in TileGrid so the HUD and the hover
+## marker (maps/camera_3d.gd) always agree on where a tower can go.
 const TOWERS_ROOT_NAME := "Towers"
 const TOWER_GROUP := "towers"
+
+## Minimum gap between two towers so their bases never overlap.
+const MIN_TOWER_SPACING := 1.5
 
 ## Fraction of a tower's cost refunded when it is sold.
 const SELL_REFUND_RATIO := 0.5
@@ -73,7 +77,7 @@ const CLICK_RING_SIZE := 46.0
 
 func _ready() -> void:
 	_pause_button.pressed.connect(func() -> void: pause_pressed.emit())
-	_upgrade_button.pressed.connect(func() -> void: upgrade_pressed.emit())
+	_upgrade_button.pressed.connect(_on_upgrade_pressed)
 	_sell_button.pressed.connect(_on_sell_pressed)
 	_inspect_close_button.pressed.connect(hide_tower_info)
 	for i: int in _build_buttons.size():
@@ -118,7 +122,8 @@ func show_tower_info(tower_name: String, damage: int, range_tiles: int, upgrade_
 	_inspect_title.text = tower_name
 	_damage_label.text = "Damage: %d" % damage
 	_range_label.text = "Range: %d" % range_tiles
-	_upgrade_button.text = "Upgrade (%d)" % upgrade_cost
+	_upgrade_button.text = "Upgrade (%d)" % upgrade_cost if upgrade_cost > 0 else "Max Level"
+	_upgrade_button.disabled = upgrade_cost <= 0
 	_sell_button.text = "Sell (%d)" % sell_value
 	_inspect_panel.visible = true
 
@@ -163,20 +168,22 @@ func _try_place_tower() -> void:
 	if result.is_empty():
 		return
 
-	# 1. Snap the hit point to the tile grid.
-	var hit: Vector3 = result["position"]
-	var cell := Vector3(
-		roundf(hit.x / TILE_SIZE) * TILE_SIZE,
-		hit.y,
-		roundf(hit.z / TILE_SIZE) * TILE_SIZE
-	)
-
-	# 2. Don't allow two towers on the same tile.
-	if _is_cell_occupied(cell):
-		print("Tile already has a tower.")
+	# 1. Only grass tiles are buildable - never the enemy path (spawner,
+	#    straights, corners, end). This is the same rule the hover marker uses.
+	if not TileGrid.is_buildable_tile(result.get("collider")):
+		print("You can only build on grass tiles.")
 		return
 
-	# 3. Pay for it, spawn it, and clear the selection.
+	# 2. Snap the hit point onto the tile the cursor is over.
+	var hit: Vector3 = result["position"]
+	var cell := TileGrid.snap_to_tile(hit)
+
+	# 3. Keep a gap between towers so their bases never overlap.
+	if _is_cell_occupied(cell):
+		print("Too close to another tower.")
+		return
+
+	# 4. Pay for it, spawn it, and clear the selection.
 	if _gold < get_selected_cost():
 		return
 	var tower_root := _get_tower_root()
@@ -203,7 +210,7 @@ func _try_select_tower() -> void:
 		return
 	var tower := _tower_from_collider(result.get("collider"))
 	if tower == null:
-		tower = _nearest_tower(result["position"], TILE_SIZE)
+		tower = _nearest_tower(result["position"], TileGrid.CELL_SIZE)
 	if tower == null:
 		hide_tower_info()
 		return
@@ -229,7 +236,21 @@ func _select_tower(tower: Node3D) -> void:
 	var damage: int = int(card.get("damage", 0))
 	var range_tiles: int = int(card.get("range", 0))
 	var cost: int = int(card.get("cost", 0))
-	show_tower_info(tower_name, damage, range_tiles, cost, int(round(cost * SELL_REFUND_RATIO)))
+
+	# Prefer the tower's live values - they grow with its upgrade level.
+	var level: int = 1
+	if tower.has_method("get_level"):
+		level = int(tower.call("get_level"))
+	if tower.has_method("get_damage"):
+		damage = int(tower.call("get_damage"))
+	if tower.has_method("get_range"):
+		range_tiles = int(round(float(tower.call("get_range"))))
+	var upgrade_cost: int = cost
+	if tower.has_method("upgrade_cost"):
+		upgrade_cost = int(tower.call("upgrade_cost"))
+
+	var title: String = tower_name if level <= 1 else "%s  Lv%d" % [tower_name, level]
+	show_tower_info(title, damage, range_tiles, upgrade_cost, int(round(cost * SELL_REFUND_RATIO)))
 
 
 ## Walk up from a ray collider to the tower node it belongs to, if any.
@@ -240,6 +261,26 @@ func _tower_from_collider(collider: Object) -> Node3D:
 			return node as Node3D
 		node = node.get_parent()
 	return null
+
+
+## Buy the next level for the inspected tower, if it can be afforded.
+func _on_upgrade_pressed() -> void:
+	var tower := _selected_tower
+	if not is_instance_valid(tower) or not tower.has_method("upgrade"):
+		upgrade_pressed.emit()
+		return
+	var cost: int = int(tower.call("upgrade_cost"))
+	if cost <= 0:
+		upgrade_pressed.emit()
+		return
+	if _gold < cost:
+		print("Not enough gold to upgrade (%d needed, have %d)" % [cost, _gold])
+		upgrade_pressed.emit()
+		return
+	add_gold(-cost)
+	tower.call("upgrade")
+	_select_tower(tower)   # refresh the panel with the new stats
+	upgrade_pressed.emit()
 
 
 func _on_sell_pressed() -> void:
@@ -271,7 +312,7 @@ func _raycast_world() -> Dictionary:
 
 func _is_cell_occupied(cell: Vector3) -> bool:
 	for node: Node in get_tree().get_nodes_in_group(TOWER_GROUP):
-		if node is Node3D and (node as Node3D).global_position.distance_to(cell) < TILE_SIZE * 0.5:
+		if node is Node3D and (node as Node3D).global_position.distance_to(cell) < MIN_TOWER_SPACING:
 			return true
 	return false
 

@@ -9,7 +9,6 @@ const _HOVER_SCALE := 1.06
 const _PRESS_SCALE := 0.95
 const _HOVER_TINT := Color(1.12, 1.12, 1.12, 1.0)
 const _PRESS_TINT := Color(0.92, 0.92, 0.92, 1.0)
-const TEST_PROTOTYPE_GAMEPLAY_UI = preload("uid://bd560m6yx150h")
 
 
 var _tween: Tween

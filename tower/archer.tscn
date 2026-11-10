@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://vt73jnpcbx0l"]
 
-[ext_resource type="ArrayMesh" uid="uid://bkhy7qqjewr7b" path="res://assets/Models/OBJ format/weapon-ballista.obj" id="1_4ligm"]
 [ext_resource type="Script" uid="uid://dksogiorlynmm" path="res://tower/towerScripts/archer.gd" id="1_61xmd"]
-[ext_resource type="ArrayMesh" path="res://assets/Models/OBJ format/tower-round-base.obj" id="2_base"]
+[ext_resource type="ArrayMesh" uid="uid://c7lj42p24rbhh" path="res://assets/Models/OBJ format/tower-round-base.obj" id="2_base"]
+[ext_resource type="ArrayMesh" uid="uid://boy256ema1ufv" path="res://assets/MA'AM BERNZ ASSETS/ARCHER.obj" id="3_blahm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kqmmw"]
 size = Vector3(1, 0.23754883, 1)
@@ -11,16 +11,15 @@ size = Vector3(1, 0.23754883, 1)
 radius = 6.165207
 
 [node name="archer" type="StaticBody3D" unique_id=1374681455]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_61xmd")
 
-[node name="Base" type="MeshInstance3D" parent="."]
+[node name="Base" type="MeshInstance3D" parent="." unique_id=2087833715]
 transform = Transform3D(1.6, 0, 0, 0, 1, 0, 0, 0, 1.6, 0, 0, 0)
 mesh = ExtResource("2_base")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Base" unique_id=1702982833]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
-mesh = ExtResource("1_4ligm")
+transform = Transform3D(-0.16999999, 0, -2.5669284e-08, 0, 0.17, 0, 2.5669284e-08, 0, -0.16999999, 0, 0.19751948, 0)
+mesh = ExtResource("3_blahm")
 
 [node name="Aim" type="Marker3D" parent="Base/MeshInstance3D" unique_id=326655632]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45008934, 0.60655165)

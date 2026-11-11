@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dwrni8t8li8p"
+path="res://.godot/imported/KleptoLindaCredits.wav-cc387fc9fc665e6c32adf59042593456.sample"
+
+[deps]
+
+source_file="res://assets/music & BGM/KleptoLindaCredits.wav"
+dest_files=["res://.godot/imported/KleptoLindaCredits.wav-cc387fc9fc665e6c32adf59042593456.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://hvqy4ib867rf" path="res://assets/generated/icon_sword.png" id="5_sword"]
 [ext_resource type="Texture2D" uid="uid://bgj4d2e1cfaom" path="res://assets/generated/btn_restart.png" id="6_retry"]
 [ext_resource type="Texture2D" uid="uid://bqni8rjic0fba" path="res://assets/generated/btn_mainmenu.png" id="7_menu"]
+[ext_resource type="AudioStream" uid="uid://dwrni8t8li8p" path="res://assets/music & BGM/KleptoLindaCredits.wav" id="8_ts7a1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_window"]
 content_margin_left = 50.0
@@ -170,3 +171,8 @@ texture_normal = ExtResource("7_menu")
 ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("2_btn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=316708301]
+stream = ExtResource("8_ts7a1")
+volume_db = -10.0
+autoplay = true

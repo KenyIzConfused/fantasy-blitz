@@ -17,7 +17,7 @@ config/icon="uid://b4sing24em1x"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/stretch/mode="expand"
 window/stretch/aspect="expand"
 
 [input]

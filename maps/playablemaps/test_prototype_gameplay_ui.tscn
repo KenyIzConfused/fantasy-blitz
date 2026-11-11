@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cw85d5c1nn6t8" path="res://maps/playablemaps/prototype_level.gd" id="2_level"]
 [ext_resource type="PackedScene" uid="uid://d4mk7hu454n2a" path="res://UI/Gameplay_UI.tscn" id="4_hud"]
 [ext_resource type="PackedScene" uid="uid://dj4bte0u3yb2w" path="res://UI/Pause_Screen.tscn" id="5_pause"]
+[ext_resource type="AudioStream" uid="uid://ch6qnwv8oyruv" path="res://assets/music & BGM/CriticalTheme.wav" id="6_2tyra"]
 [ext_resource type="PackedScene" uid="uid://dydp2oma3nijp" path="res://UI/Defeat_Screen.tscn" id="6_defeat"]
 
 [node name="MainLevel" type="Node3D" unique_id=402520655]
@@ -20,3 +21,9 @@ layer = 10
 visible = false
 
 [node name="DefeatScreen" parent="HUDLayer" unique_id=123456789 instance=ExtResource("6_defeat")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=638209085]
+stream = ExtResource("6_2tyra")
+volume_db = -10.0
+autoplay = true
+mix_target = 1

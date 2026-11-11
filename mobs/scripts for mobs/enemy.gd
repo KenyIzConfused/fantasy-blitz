@@ -4,7 +4,7 @@ extends CharacterBody3D
 ## frame. Health and speed are set per-wave by the spawner (main_level.gd).
 
 @export var speed: float = 2.0
-@export var health: int = 15
+@export var health: int = 100
 
 @onready var Path : PathFollow3D = get_parent()
 

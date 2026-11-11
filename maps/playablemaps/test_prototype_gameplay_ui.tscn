@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dj4bte0u3yb2w" path="res://UI/Pause_Screen.tscn" id="5_pause"]
 [ext_resource type="AudioStream" uid="uid://ch6qnwv8oyruv" path="res://assets/music & BGM/CriticalTheme.wav" id="6_2tyra"]
 [ext_resource type="PackedScene" uid="uid://dydp2oma3nijp" path="res://UI/Defeat_Screen.tscn" id="6_defeat"]
+[ext_resource type="PackedScene" path="res://UI/Victory_Screen.tscn" id="7_victory"]
 
 [node name="MainLevel" type="Node3D" unique_id=402520655]
 script = ExtResource("2_level")
@@ -22,8 +23,12 @@ visible = false
 
 [node name="DefeatScreen" parent="HUDLayer" unique_id=123456789 instance=ExtResource("6_defeat")]
 
+<<<<<<< HEAD
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=638209085]
 stream = ExtResource("6_2tyra")
 volume_db = -10.0
 autoplay = true
 mix_target = 1
+=======
+[node name="VictoryScreen" parent="HUDLayer" unique_id=987654321 instance=ExtResource("7_victory")]
+>>>>>>> 584d639fd725b1ff052ed37cc8cbcb721b2d4f11

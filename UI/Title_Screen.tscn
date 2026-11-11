@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://clqj3wbg6kd0l" path="res://assets/generated/btn_start.png" id="5_start"]
 [ext_resource type="Texture2D" uid="uid://g3rf3njvnla" path="res://assets/generated/btn_settings.png" id="6_settings"]
 [ext_resource type="Texture2D" uid="uid://4mnjpx7s26s3" path="res://assets/generated/btn_exit.png" id="7_exit"]
+[ext_resource type="AudioStream" uid="uid://6ioll4dj3ce7" path="res://assets/music & BGM/ChillMenu.wav" id="7_vawxl"]
 
 [node name="Title" type="Control" unique_id=2114048660]
 layout_mode = 3
@@ -36,9 +37,9 @@ anchor_top = 0.58
 anchor_right = 0.5
 anchor_bottom = 0.64
 offset_left = -210.0
-offset_top = -150.0
+offset_top = -128.0
 offset_right = 210.0
-offset_bottom = 178.0
+offset_bottom = 199.99997
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
@@ -73,3 +74,42 @@ texture_normal = ExtResource("7_exit")
 ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("4_btn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=466731906]
+stream = ExtResource("7_vawxl")
+autoplay = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=482094726]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -230.5
+offset_top = 6.0
+offset_right = 230.5
+offset_bottom = 252.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1788265686]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92510957, 0.5762542, 0.4455679, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 11
+theme_override_constants/shadow_outline_size = 17
+theme_override_font_sizes/font_size = 65
+text = " FANTASY 
+                BLITZ "
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=1475795150]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.6465239, 0.66528004, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 11
+theme_override_constants/shadow_outline_size = 17
+theme_override_font_sizes/font_size = 20
+text = "                                                      by Juice Studios
+"

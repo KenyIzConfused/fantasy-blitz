@@ -10,6 +10,9 @@ const _PRESS_SCALE := 0.95
 const _HOVER_TINT := Color(1.12, 1.12, 1.12, 1.0)
 const _PRESS_TINT := Color(0.92, 0.92, 0.92, 1.0)
 
+## Menu click sound, routed through the SFX bus so the Sound slider controls it.
+const _CLICK_SFX := preload("res://assets/generated/audio/ui_click.mp3")
+
 
 var _tween: Tween
 
@@ -40,6 +43,7 @@ func _on_hover_end() -> void:
 
 func _on_button_down() -> void:
 	_animate(_PRESS_SCALE, _PRESS_TINT)
+	AudioSettings.play_sfx(_CLICK_SFX)
 
 
 func _on_button_up() -> void:

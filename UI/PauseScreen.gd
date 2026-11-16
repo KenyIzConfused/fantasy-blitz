@@ -8,6 +8,7 @@ extends Control
 @onready var _restart_button: TextureButton = %RestartButton
 @onready var _settings_button: TextureButton = %SettingsButton
 @onready var _main_menu_button: TextureButton = %MainMenuButton
+@onready var _settings_panel: SettingsPanel = $SettingsPanel
 
 
 func _ready() -> void:
@@ -26,9 +27,13 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Only react to Esc while the pause menu is actually open, so it never
-	# interferes with other overlays (e.g. the defeat screen).
+	# interferes with other overlays (e.g. the defeat screen or the settings
+	# panel, which closes itself first).
 	if event.is_action_pressed("ui_cancel") and visible:
-		_on_resume_pressed()
+		if _settings_panel.is_open():
+			_settings_panel.close()
+		else:
+			_on_resume_pressed()
 		get_viewport().set_input_as_handled()
 
 
@@ -43,8 +48,7 @@ func _on_restart_pressed() -> void:
 
 
 func _on_settings_pressed() -> void:
-	# TODO: open the shared settings panel.
-	print("Pause screen: Settings pressed")
+	_settings_panel.open()
 
 
 func _on_main_menu_pressed() -> void:

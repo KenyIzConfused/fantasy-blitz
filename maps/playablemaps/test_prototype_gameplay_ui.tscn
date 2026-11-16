@@ -27,3 +27,4 @@ stream = ExtResource("6_2tyra")
 volume_db = -10.0
 autoplay = true
 mix_target = 1
+bus = &"Music"

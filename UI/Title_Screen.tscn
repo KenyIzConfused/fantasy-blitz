@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://4mnjpx7s26s3" path="res://assets/generated/btn_exit.png" id="7_exit"]
 [ext_resource type="Texture2D" uid="uid://qps7myy78e6b" path="res://assets/generated/title_logo_2.png" id="7_vawxl"]
 [ext_resource type="AudioStream" uid="uid://6ioll4dj3ce7" path="res://assets/music & BGM/ChillMenu.wav" id="8_qjfep"]
+[ext_resource type="PackedScene" path="res://UI/SettingsPanel.tscn" id="9_settingspanel"]
 
 [node name="Title" type="Control" unique_id=2114048660]
 layout_mode = 3
@@ -96,3 +97,6 @@ expand_mode = 5
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1414638081]
 stream = ExtResource("8_qjfep")
 autoplay = true
+
+[node name="SettingsPanel" parent="." unique_id=544779124 instance=ExtResource("9_settingspanel")]
+layout_mode = 1

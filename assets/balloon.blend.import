@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://xpo6gptggrv6"
-path="res://.godot/imported/balloon.blend-71ac4dc4b72abac910e6a424feb3aa78.scn"
+valid=false
 
 [deps]
 
 source_file="res://assets/balloon.blend"
-dest_files=["res://.godot/imported/balloon.blend-71ac4dc4b72abac910e6a424feb3aa78.scn"]
 
 [params]
 

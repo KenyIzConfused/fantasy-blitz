@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dj4bte0u3yb2w"]
+[gd_scene load_steps=9 format=3 uid="uid://dj4bte0u3yb2w"]
 
 [ext_resource type="Script" uid="uid://bxv1prakpmbgw" path="res://UI/PauseScreen.gd" id="1_pause"]
 [ext_resource type="Script" uid="uid://cb7r837hhwk3q" path="res://UI/TitleButton.gd" id="3_btn"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://g3rf3njvnla" path="res://assets/generated/btn_settings.png" id="7_settings"]
 [ext_resource type="Texture2D" uid="uid://bqni8rjic0fba" path="res://assets/generated/btn_mainmenu.png" id="8_menu"]
 [ext_resource type="Texture2D" path="res://assets/generated/ui_panel_pause.png" id="2_panel"]
+[ext_resource type="PackedScene" path="res://UI/SettingsPanel.tscn" id="9_settingspanel"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_frame"]
 texture = ExtResource("2_panel")
@@ -84,3 +85,5 @@ texture_normal = ExtResource("8_menu")
 ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("3_btn")
+
+[node name="SettingsPanel" parent="." instance=ExtResource("9_settingspanel")]

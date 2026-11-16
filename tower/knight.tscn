@@ -1,45 +1,44 @@
 [gd_scene format=3 uid="uid://24gok6vrcae5"]
-	
-	[ext_resource type="ArrayMesh" path="res://assets/Models/OBJ format/tower-round-base.obj" id="1_base"]
-	[ext_resource type="ArrayMesh" path="res://assets/Models/OBJ format/weapon-cannon.obj" id="2_cannon"]
-	[ext_resource type="Script" path="res://tower/towerScripts/knight.gd" id="3_knight"]
-	
-	[sub_resource type="BoxShape3D" id="KnightBodyShape"]
-	size = Vector3(1, 0.23754883, 1)
-	
-	[sub_resource type="SphereShape3D" id="KnightRangeShape"]
-	radius = 3.5
-	debug_color = Color(0.2, 0.4, 1, 1)
-	
-	[node name="knight" type="StaticBody3D"]
-	script = ExtResource("3_knight")
-	
-	[node name="Base" type="MeshInstance3D" parent="."]
-	transform = Transform3D(1.6, 0, 0, 0, 1, 0, 0, 0, 1.6, 0, 0, 0)
-	mesh = ExtResource("1_base")
-	
-	[node name="Model" type="Node3D" parent="."]
-	transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.336, 0)
-	
-	[node name="MeshInstance3D" type="MeshInstance3D" parent="Model"]
-	mesh = ExtResource("2_cannon")
-	
-	[node name="Aim" type="Marker3D" parent="Model/MeshInstance3D"]
-	transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0.36)
-	
-	[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-	transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06311035, 0)
-	shape = SubResource("KnightBodyShape")
-	
-	[node name="mobDetector" type="Area3D" parent="."]
-	
-	[node name="CollisionShape3D" type="CollisionShape3D" parent="mobDetector"]
-	shape = SubResource("KnightRangeShape")
-	debug_color = Color(0.2, 0.4, 1, 1)
-	
-	[node name="shootCooldown" type="Timer" parent="."]
-	
-	[connection signal="body_entered" from="mobDetector" to="." method="_on_mob_detector_body_entered"]
-	[connection signal="body_exited" from="mobDetector" to="." method="_on_mob_detector_body_exited"]
-	[connection signal="timeout" from="shootCooldown" to="." method="_on_shoot_cooldown_timeout"]
-	
+
+[ext_resource type="ArrayMesh" uid="uid://c7lj42p24rbhh" path="res://assets/Models/OBJ format/tower-round-base.obj" id="1_base"]
+[ext_resource type="Script" uid="uid://t0pq8ot8hnrp" path="res://tower/towerScripts/knight.gd" id="3_knight"]
+[ext_resource type="ArrayMesh" uid="uid://1kq4vfym46g8" path="res://assets/MA'AM BERNZ ASSETS/KNIGHT.obj" id="3_uqudq"]
+
+[sub_resource type="BoxShape3D" id="KnightBodyShape"]
+size = Vector3(1, 0.23754883, 1)
+
+[sub_resource type="SphereShape3D" id="KnightRangeShape"]
+radius = 2.1858573
+
+[node name="knight" type="StaticBody3D" unique_id=1031923873]
+script = ExtResource("3_knight")
+
+[node name="Base" type="MeshInstance3D" parent="." unique_id=1165599716]
+transform = Transform3D(1.6, 0, 0, 0, 1, 0, 0, 0, 1.6, 0, 0, 0)
+mesh = ExtResource("1_base")
+
+[node name="Model" type="Node3D" parent="." unique_id=1939770645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.336, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Model" unique_id=1075291956]
+transform = Transform3D(0.17, 0, 0, 0, 0.17, 0, 0, 0, 0.17, 0, 0, 0)
+mesh = ExtResource("3_uqudq")
+
+[node name="Aim" type="Marker3D" parent="Model/MeshInstance3D" unique_id=1481305784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0.36)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=326012312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06311035, 0)
+shape = SubResource("KnightBodyShape")
+
+[node name="mobDetector" type="Area3D" parent="." unique_id=1078067107]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mobDetector" unique_id=1650997140]
+shape = SubResource("KnightRangeShape")
+debug_color = Color(0.2, 0.4, 1, 1)
+
+[node name="shootCooldown" type="Timer" parent="." unique_id=875729725]
+
+[connection signal="body_entered" from="mobDetector" to="." method="_on_mob_detector_body_entered"]
+[connection signal="body_exited" from="mobDetector" to="." method="_on_mob_detector_body_exited"]
+[connection signal="timeout" from="shootCooldown" to="." method="_on_shoot_cooldown_timeout"]

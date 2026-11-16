@@ -17,8 +17,12 @@ config/icon="uid://b4sing24em1x"
 
 [display]
 
-window/stretch/mode="expand"
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/mode=2
+window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/vsync/vsync_mode=0
 
 [input]
 
@@ -35,3 +39,4 @@ click={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true
